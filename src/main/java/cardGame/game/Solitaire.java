@@ -35,13 +35,10 @@ public class Solitaire extends Observable implements Observer{
     }
 
     public Solitaire() {
-        decks.add(makeDeck());
-        decks.add(makeDeck());
-        decks.add(makeDeck());
-
-        movables.add(createMovableCard(decks.get(0)));
-        movables.add(createMovableCard(decks.get(1)));
-        movables.add(createMovableCard(decks.get(2)));
+        for(int i = 0; i < 7; i++) {
+            decks.add(makeDeck());
+            movables.add(createMovableCard(decks.get(i)));
+        }
     }
 
     public AbstractDeck getDeck(int deckNumber) {
