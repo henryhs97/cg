@@ -37,39 +37,18 @@ public class SolitaireDragger extends MouseInputAdapter {
      */
     @Override
     public void mousePressed(MouseEvent event) {
-        if(solitaire.getMovableCard(0) != null) {
-            if(     event.getX() > panel.getMovableX(0) &&
-                    event.getX() < panel.getMovableX(0) + panel.cardWidth() &&
-                    event.getY() > panel.getMovableY(0) &&
-                    event.getY() < panel.getMovableY(0) + panel.cardHeight()
-                    ) {
-                selected = 0;
-                startX = event.getX();
-                startY = event.getY();
-            }
-        }
-        if(solitaire.getMovableCard(1) != null) {
-            if(     event.getX() > panel.getMovableX(1) &&
-                    event.getX() < panel.getMovableX(1) + panel.cardWidth() &&
-                    event.getY() > panel.getMovableY(1) &&
-                    event.getY() < panel.getMovableY(1) + panel.cardHeight()
-                    ) {
-                selected = 1;
-                startX = event.getX();
-                startY = event.getY();
-            }
-        }
-        if(solitaire.getMovableCard(2) != null) {
-            if(     event.getX() > panel.getMovableX(2) &&
-                    event.getX() < panel.getMovableX(2) + panel.cardWidth() &&
-                    event.getY() > panel.getMovableY(2) &&
-                    event.getY() < panel.getMovableY(2) + panel.cardHeight()
-                    ) {
-                selected = 2;
-                startX = event.getX();
-                startY = event.getY();
-            }
-        }
+    	for(int cardNum = 0; cardNum<solitaire.getNumOfDecks(); cardNum++) {
+    	       if(     event.getX() > panel.getMovableX(cardNum) &&
+                       event.getX() < panel.getMovableX(cardNum) + panel.cardWidth() &&
+                       event.getY() > panel.getMovableY(cardNum) &&
+                       event.getY() < panel.getMovableY(cardNum) + panel.cardHeight()
+                       ) {
+                   selected = cardNum;
+                   startX = event.getX();
+                   startY = event.getY();
+                   break;
+               }
+           }    		      
     }
 
     /**
@@ -81,39 +60,23 @@ public class SolitaireDragger extends MouseInputAdapter {
      */
     @Override
     public void mouseReleased(MouseEvent event) {
-        if(selected == 0) {
-            if (panel.inArea(event.getPoint()) == 1){
-                solitaire.move(selected, 1);
-            }else if(panel.inArea(event.getPoint()) == 2){
-                solitaire.move(selected, 2);
-            }
-            else {
-                solitaire.getMovableCard(0).setRelativeX(0);
-                solitaire.getMovableCard(0).setRelativeY(0);
-            }
-        }
-        if(selected == 1) {
-            if(panel.inArea(event.getPoint()) == 0) {
-                solitaire.move(selected, 0);
-            }else if(panel.inArea(event.getPoint()) == 2){
-                solitaire.move(selected, 2);
-            }
-            else {
-                solitaire.getMovableCard(1).setRelativeX(1);
-                solitaire.getMovableCard(1).setRelativeY(1);
-            }
-        }
-        if(selected == 2) {
-            if(panel.inArea(event.getPoint()) == 0) {
-                solitaire.move(selected, 0);
-            }else if(panel.inArea(event.getPoint()) == 1){
-                solitaire.move(selected, 1);
-            }
-            else {
-                solitaire.getMovableCard(2).setRelativeX(2);
-                solitaire.getMovableCard(2).setRelativeY(2);
-            }
-        }
+    	for(int i = 0; i < solitaire.getNumOfDecks(); i++) {
+    		if(i == selected) {	
+    			for(int j = 0; j < solitaire.getNumOfDecks(); j++) {
+    				if(panel.inArea(event.getPoint()) == j) {
+		                if (i != j){
+		                    solitaire.move(selected, j);
+		                    break;
+		                } else if(i == j) {
+		                    solitaire.getMovableCard(i).setRelativeX(i);
+		                    solitaire.getMovableCard(i).setRelativeY(i);
+		                    break;
+		                }
+    				}
+    			}
+    			break;
+    		}
+    	}
         selected = -1;
     }
 
@@ -123,18 +86,12 @@ public class SolitaireDragger extends MouseInputAdapter {
      */
     @Override
     public void mouseDragged(MouseEvent event) {
-        if(selected == 0) {
-            solitaire.getMovableCard(0).setRelativeX(event.getX() - startX);
-            solitaire.getMovableCard(0).setRelativeY(event.getY() - startY);
-        }
-        if(selected == 1) {
-            solitaire.getMovableCard(1).setRelativeX(event.getX() - startX);
-            solitaire.getMovableCard(1).setRelativeY(event.getY() - startY);
-        }
-        if(selected == 2) {
-            solitaire.getMovableCard(2).setRelativeX(event.getX() - startX);
-            solitaire.getMovableCard(2).setRelativeY(event.getY() - startY);
-        }
+    	for(int i = 0; i < solitaire.getNumOfDecks(); i++) {
+    		if(selected == i) {
+                solitaire.getMovableCard(i).setRelativeX(event.getX() - startX);
+                solitaire.getMovableCard(i).setRelativeY(event.getY() - startY);
+            }
+    	}
     }
 
 }
