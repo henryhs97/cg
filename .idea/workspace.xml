@@ -28,8 +28,8 @@
       <file leaf-file-name="SolitaireDragger.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="173">
+              <caret line="69" column="32" lean-forward="true" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -90,6 +90,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" />
       </list>
     </option>
   </component>
@@ -835,12 +836,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495722072372</updated>
-      <workItem from="1495722073716" duration="1587000" />
+      <workItem from="1495722073716" duration="1790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1587000" />
+    <option name="totallyTimeSpent" value="1790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="92" y="29" width="1324" height="780" extended-state="0" />
@@ -934,8 +935,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="173">
+          <caret line="69" column="32" lean-forward="true" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
           <folding />
         </state>
       </provider>

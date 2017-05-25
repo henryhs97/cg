@@ -67,7 +67,7 @@ public class SolitaireDragger extends MouseInputAdapter {
 		                if (i != j){
 		                    solitaire.move(selected, j);
 		                    break;
-		                } else if(i == j) {
+		                } else {
 		                    solitaire.getMovableCard(i).setRelativeX(i);
 		                    solitaire.getMovableCard(i).setRelativeY(i);
 		                    break;
