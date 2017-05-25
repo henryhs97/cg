@@ -1,0 +1,137 @@
+package cardGame.view;
+
+import cardGame.game.Draw;
+import cardGame.game.MovableCard;
+import cardGame.game.Solitaire;
+import cardGame.model.Card;
+import com.sun.org.apache.xpath.internal.functions.FuncFloor;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+import java.util.List;
+
+/**
+ * Created by sibdoo on 22/05/2017.
+ */
+public class SolitairePanel extends JPanel implements Observer {
+
+
+    private static final int CARD_SPACING = 2; //pixels
+    private static final int Y_OFFSET = Card.values().length * CARD_SPACING;
+
+    private Solitaire solitaire;
+
+    private List<Integer> movablesX = new ArrayList<>();
+
+    private List<Integer> movablesY = new ArrayList<>();
+
+
+    public int getMovableX (int card){ return movablesX.get(card); }
+
+    public int getMovableY (int card){ return movablesY.get(card); }
+
+    public SolitairePanel(Solitaire solitaire){
+        this.solitaire = solitaire;
+        solitaire.addObserver(this);
+        setBackground(new Color(116, 199, 203));
+        setVisible(true);
+        setOpaque(true);
+        movablesX.add(0);
+        movablesX.add(0);
+        movablesX.add(0);
+        movablesY.add(0);
+        movablesY.add(0);
+        movablesY.add(0);
+    }
+
+    public int inArea(Point point) {
+        return (int) point.getX() / (getWidth() / solitaire.getNumOfDecks());
+    }
+
+    private void paintAreas(Graphics g) {
+        int numDecks = solitaire.getNumOfDecks();
+        g.setColor(Color.YELLOW);
+        g.drawRect(0, 0, getWidth() / numDecks, getHeight() - 1);
+        g.drawRect(getWidth() / numDecks, 0, getWidth() / numDecks - 1, getHeight() - 1);
+        g.drawRect(2* getWidth() / numDecks, 0, getWidth() / numDecks - 1, getHeight() - 1);
+
+        g.setColor(Color.BLACK);
+    }
+
+    private int getSpacing() {
+        return (int) ((getHeight() * 20) / 600.0);
+    }
+
+    public int cardWidth() {
+        if((getHeight() * 600.0) / (getWidth() * 436.0) <= 1.0)
+            return (int) ((cardHeight() * 436.0) / 600.0);
+        return (getWidth() - getSpacing() * 3 - 2 * Card.values().length) / 4;
+    }
+
+    public int cardHeight() {
+        if((getHeight() * 600.0) / (getWidth() * 436.0) > 1.0)
+            return (int) ((cardWidth() * 600.0) / 436.0);
+        return (getHeight() - getSpacing() * 2 - 2 * Card.values().length) / 2;
+    }
+
+    private void paintDecks(Graphics g) {
+        int depth;
+        int currMovable = -1;
+        int numDecks = solitaire.getNumOfDecks();
+        Integer movableX = 0;
+        Integer movableY = 0;
+        for(int deckNum = 0; deckNum < numDecks; deckNum++) {
+            for (depth = 0; depth < solitaire.getDeck(deckNum).size(); ++depth) {
+                int posX = getSpacing() + depth + deckNum * getWidth()/numDecks;
+                int posY = getSpacing() + Y_OFFSET - CARD_SPACING * depth;
+                g.drawImage(CardBackTextures.getTexture(CardBack.CARD_BACK_BLUE)
+                        , posX, posY, cardWidth(), cardHeight(), this);
+                g.drawRect(posX, posY, cardWidth(), cardHeight());
+            }
+        }
+        for(int deckNum = 0; deckNum < numDecks; deckNum++) {
+            MovableCard dependency = solitaire.getMovableCard(deckNum);
+            if(dependency != null && (dependency.getRelativeX() != 0 || dependency.getRelativeY() != 0)) {
+                currMovable = deckNum;
+            }else
+            if (dependency != null) {
+                movableX = getSpacing() + solitaire.getDeck(deckNum).size() + deckNum * getWidth() / numDecks + dependency.getRelativeX();
+                movableY = getSpacing() + Y_OFFSET - CARD_SPACING * solitaire.getDeck(deckNum).size()
+                        + dependency.getRelativeY();
+                g.drawImage(CardBackTextures.getTexture(CardBack.CARD_BACK_BLUE)
+                        , movableX, movableY, cardWidth(), cardHeight(), this);
+                g.drawRect(movableX, movableY, cardWidth(), cardHeight());
+                movablesX.set(deckNum, movableX);
+                movablesY.set(deckNum, movableY);
+            }
+        }
+        if(currMovable != -1) {
+            MovableCard dependency = solitaire.getMovableCard(currMovable);
+            if (dependency != null && (dependency.getRelativeX() != 0 || dependency.getRelativeY() != 0)) {
+                movableX = getSpacing() + solitaire.getDeck(currMovable).size() + currMovable * getWidth() / numDecks + dependency.getRelativeX();
+                movableY = getSpacing() + Y_OFFSET - CARD_SPACING * solitaire.getDeck(currMovable).size()
+                        + dependency.getRelativeY();
+                g.drawImage(CardBackTextures.getTexture(CardBack.CARD_BACK_BLUE)
+                        , movableX, movableY, cardWidth(), cardHeight(), this);
+                g.drawRect(movableX, movableY, cardWidth(), cardHeight());
+                movablesX.set(currMovable, movableX);
+                movablesY.set(currMovable, movableY);
+            }
+        }
+
+
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        paintAreas(g);
+        paintDecks(g);
+    }
+
+    @Override
+    public void update(Observable observed, Object message) {
+        repaint();
+    }
+}
