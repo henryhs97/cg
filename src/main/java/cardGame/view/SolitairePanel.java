@@ -96,7 +96,7 @@ public class SolitairePanel extends JPanel implements Observer {
                 movableX = getSpacing() + deckNum * getWidth() / numDecks + dependency.getRelativeX();
                 movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(deckNum).size()
                         + dependency.getRelativeY();
-                g.drawImage(CardBackTextures.getTexture(CardBack.CARD_BACK_BLUE)
+                g.drawImage(CardTextures.getTexture(solitaire.getMovableCard(deckNum).getCard())
                         , movableX, movableY, cardWidth(), cardHeight(), this);
                 g.drawRect(movableX, movableY, cardWidth(), cardHeight());
                 movablesX.set(deckNum, movableX);
@@ -109,7 +109,7 @@ public class SolitairePanel extends JPanel implements Observer {
                 movableX = getSpacing() + currMovable * getWidth() / numDecks + dependency.getRelativeX();
                 movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(currMovable).size()
                         + dependency.getRelativeY();
-                g.drawImage(CardBackTextures.getTexture(CardBack.CARD_BACK_BLUE)
+                g.drawImage(CardTextures.getTexture(solitaire.getMovableCard(currMovable).getCard())
                         , movableX, movableY, cardWidth(), cardHeight(), this);
                 g.drawRect(movableX, movableY, cardWidth(), cardHeight());
                 movablesX.set(currMovable, movableX);
