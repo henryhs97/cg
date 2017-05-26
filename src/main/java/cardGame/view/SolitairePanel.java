@@ -86,43 +86,39 @@ public class SolitairePanel extends JPanel implements Observer {
                 g.drawRect(posX, posY, cardWidth(), cardHeight());
             }
         }
+
         for(int deckNum = 0; deckNum < numDecks; deckNum++) {
-            Movable dependency = solitaire.getMovableCard(deckNum);
+            MovablePile dependency = solitaire.getMovablePile(deckNum);
             if(dependency != null && (dependency.getRelativeX() != 0 || dependency.getRelativeY() != 0)) {
                 currMovable = deckNum;
             }else
             if (dependency != null) {
-                movableX = getSpacing() + deckNum * getWidth() / numDecks + dependency.getRelativeX();
-                movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(deckNum).size()
-                        + dependency.getRelativeY();
-                g.drawImage(CardTextures.getTexture(solitaire.getMovableCard(deckNum).getCard())
-                        , movableX, movableY, cardWidth(), cardHeight(), this);
-                g.drawRect(movableX, movableY, cardWidth(), cardHeight());
-                movablesX.set(deckNum, movableX);
-                movablesY.set(deckNum, movableY);
+                for (depth = 0; depth < solitaire.getMovablePile(deckNum).size(); ++depth) {
+                    movableX = getSpacing() + deckNum * getWidth() / numDecks + dependency.getRelativeX();
+                    movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(deckNum).size() + CARD_SPACING * depth
+                            + dependency.getRelativeY();
+                    g.drawImage(CardTextures.getTexture(solitaire.getMovablePile(deckNum).getCardAt(depth))
+                            , movableX, movableY, cardWidth(), cardHeight(), this);
+                    g.drawRect(movableX, movableY, cardWidth(), cardHeight());
+                    movablesX.set(deckNum, movableX);
+                    movablesY.set(deckNum, movableY);
+                }
             }
+
         }
         if(currMovable != -1) {
-            Movable dependency = solitaire.getMovableCard(currMovable);
-            if (dependency != null && (dependency.getRelativeX() != 0 || dependency.getRelativeY() != 0)) {
+            MovablePile dependency = solitaire.getMovablePile(currMovable);
+            for (depth = 0; depth < solitaire.getMovablePile(currMovable).size(); ++depth) {
                 movableX = getSpacing() + currMovable * getWidth() / numDecks + dependency.getRelativeX();
-                movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(currMovable).size()
+                movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(currMovable).size() + CARD_SPACING * depth
                         + dependency.getRelativeY();
-                g.drawImage(CardTextures.getTexture(solitaire.getMovableCard(currMovable).getCard())
+                g.drawImage(CardTextures.getTexture(solitaire.getMovablePile(currMovable).getCardAt(depth))
                         , movableX, movableY, cardWidth(), cardHeight(), this);
                 g.drawRect(movableX, movableY, cardWidth(), cardHeight());
                 movablesX.set(currMovable, movableX);
                 movablesY.set(currMovable, movableY);
             }
         }
-
-
-        /*for(int deckNum = 0; deckNum < numDecks; deckNum++) {
-            MovablePile dependency = solitaire.getMovablePile(deckNum);
-            for (depth = 0; depth < solitaire.getMovablePile(deckNum).size(); ++depth) {
-
-            }
-        }*/
     }
 
     @Override
