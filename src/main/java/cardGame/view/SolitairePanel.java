@@ -16,7 +16,7 @@ import java.util.List;
 public class SolitairePanel extends JPanel implements Observer {
 
 
-    private static final int CARD_SPACING = 5; //pixels
+    private static final int CARD_SPACING = 20; //pixels
     private static final int Y_OFFSET = Card.values().length * CARD_SPACING;
 
     private Solitaire solitaire;
@@ -55,9 +55,11 @@ public class SolitairePanel extends JPanel implements Observer {
         g.setColor(Color.BLACK);
     }
 
-    public int getSpacing() {
+    private int getSpacing() {
         return (int) ((getHeight() * 20) / 600.0);
     }
+
+    public int getCardSpacing() { return CARD_SPACING; }
 
     public int cardWidth() {
         if((getHeight() * 600.0) / (getWidth() * 436.0) <= 1.0)

@@ -34,6 +34,7 @@ public class MovablePile extends Movable{
     public List<Card> splitAt(int index){
         List<Card> removedCards = new ArrayList<>();
         removedCards.addAll(pile.subList(pile.size() - (index + 1),pile.size()));
+        System.out.println(index + " " + pile.size());
         this.pile.removeAll(removedCards);
         return removedCards;
     }
