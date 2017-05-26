@@ -117,12 +117,12 @@ public class SolitairePanel extends JPanel implements Observer {
         }
 
 
-        /*for(int deckNum = 0; deckNum < numDecks; deckNum++) {
+        for(int deckNum = 0; deckNum < numDecks; deckNum++) {
             MovablePile dependency = solitaire.getMovablePile(deckNum);
             for (depth = 0; depth < solitaire.getMovablePile(deckNum).size(); ++depth) {
 
             }
-        }*/
+        }
     }
 
     @Override
