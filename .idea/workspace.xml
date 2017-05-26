@@ -4,8 +4,6 @@
     <list default="true" id="0f662ae0-1355-4609-91e7-676034d4bc89" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SolitaireDragger.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SolitaireDragger.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
-              <caret line="53" column="71" lean-forward="false" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="71" />
+              <caret line="53" column="94" lean-forward="false" selection-start-line="53" selection-start-column="94" selection-end-line="53" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -95,16 +93,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovablePile.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MovablePile.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="219">
+              <caret line="36" column="81" lean-forward="false" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
                 <element signature="e#602#603#0" expanded="true" />
-                <element signature="e#959#960#0" expanded="true" />
-                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#999#1000#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,8 +165,8 @@
         <option value="$PROJECT_DIR$/src/main/java/cardGame/model/CompleteDeck.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java" />
       </list>
     </option>
   </component>
@@ -923,12 +922,12 @@
       <workItem from="1495722073716" duration="2974000" />
       <workItem from="1495738048169" duration="64000" />
       <workItem from="1495739468394" duration="710000" />
-      <workItem from="1495782015600" duration="12330000" />
+      <workItem from="1495782015600" duration="12486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16078000" />
+    <option name="totallyTimeSpent" value="16234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="42" width="1324" height="780" extended-state="0" />
@@ -1071,9 +1070,10 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
             <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1216,9 +1216,10 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
             <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1340,9 +1341,10 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
             <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1492,6 +1494,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1499,16 +1511,6 @@
           <folding>
             <element signature="e#373#374#0" expanded="true" />
             <element signature="e#400#401#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1521,24 +1523,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
-          <caret line="53" column="71" lean-forward="false" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="71" />
+          <caret line="53" column="94" lean-forward="false" selection-start-line="53" selection-start-column="94" selection-end-line="53" selection-end-column="94" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="36" column="81" lean-forward="false" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
