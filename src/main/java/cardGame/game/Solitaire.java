@@ -3,6 +3,7 @@ package cardGame.game;
 import cardGame.model.AbstractDeck;
 import cardGame.model.Card;
 import cardGame.model.CompleteDeck;
+import cardGame.model.EmptyDeck;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,26 +14,18 @@ import java.util.Observer;
 public class Solitaire extends Observable implements Observer{
 
     private List<AbstractDeck> decks = new ArrayList<>();
-
     private List<MovablePile> movables = new ArrayList<>();
 
 
-    private static AbstractDeck makeDeck() {
+    private static AbstractDeck makeCompleteDeck() {
         AbstractDeck deck = new CompleteDeck();
         deck.shuffle();
         return deck;
     }
-
-    /**
-     *
-     */
-    private MovableCard createMovableCard(AbstractDeck deck) {
-        MovableCard movable = null;
-        if(!deck.isEmpty()) {
-            movable = new MovableCard(deck.draw());
-            movable.addObserver(this);
-        }
-        return movable;
+    
+    private static AbstractDeck makeEmptyDeck() {
+        AbstractDeck deck = new EmptyDeck();
+        return deck;
     }
 
     private MovablePile createMovablePile(AbstractDeck deck) {
@@ -45,24 +38,22 @@ public class Solitaire extends Observable implements Observer{
     }
 
     public Solitaire() {
-        for(int i = 0; i < 7; i++) {
-            decks.add(makeDeck());
+    	 decks.add(makeCompleteDeck());    	
+    	 
+        for(int i = 1; i <= 7; i++) {     
+        	decks.add(makeEmptyDeck());  
+        	for(int j = 0; j < i; j++) {
+        		decks.get(i).addOnTop(decks.get(0).draw());
+        	}
         }
-        decks.get(0).addOnTop(Card.ACE_CLUBS);
-        decks.get(1).addOnTop(Card.ACE_DIAMONDS);
-
-        decks.get(2).addOnTop(Card.ACE_HEARTS);
-
-        decks.get(3).addOnTop(Card.ACE_SPADES);
-
-        decks.get(4).addOnTop(Card.TEN_CLUBS);
-
-        decks.get(5).addOnTop(Card.TWO_CLUBS);
-        decks.get(6).addOnTop(Card.THREE_CLUBS);
-        for(int i = 0; i < 7; i++) {
+        
+        System.out.println(decks.size());
+        for(int i = 0; i <= 7; i++) {
             movables.add(createMovablePile(decks.get(i)));
         }
-
+        
+        
+    	
     }
 
     public AbstractDeck getDeck(int deckNumber) {

@@ -9,6 +9,7 @@ public class CompleteDeck extends AbstractDeck {
      * Add all possible cards
      */
     protected void addCards() {
-        addOnTop(Card.BLACK_JOKER);
+    	for(Card card : Card.values())
+            addOnTop(card);
     }
 }

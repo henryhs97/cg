@@ -1,7 +1,8 @@
 package cardGame.model;
 
 /**
- * Represents the kinds of playing cards found in ubiquitous 54-card decks
+ * Represents the kinds of playing cards found in ubiquitous 52-card decks,
+ * not including jokers.
  *
  * WARNING: enum types implement toString by default. This information is
  * used to load textures in view. If you override toString you may break
@@ -67,11 +68,7 @@ public enum Card {
     TEN_SPADES      (Face.TEN,   Suit.SPADES),
     JACK_SPADES     (Face.JACK,  Suit.SPADES),
     QUEEN_SPADES    (Face.QUEEN, Suit.SPADES),
-    KING_SPADES     (Face.KING,  Suit.SPADES),
-    
-    //Jokers
-    BLACK_JOKER     (Face.JOKER, Colour.RED),
-    RED_JOKER       (Face.JOKER, Colour.BLACK);
+    KING_SPADES     (Face.KING,  Suit.SPADES);
     
     /**
      * Represents the faces a card can have
@@ -90,7 +87,6 @@ public enum Card {
         JACK,
         QUEEN,
         KING,
-        JOKER;
     }
     
     /**

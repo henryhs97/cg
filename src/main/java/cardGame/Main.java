@@ -1,21 +1,13 @@
 package cardGame;
 
-import cardGame.controller.SolitaireDragger;
-import cardGame.game.Draw;
-
-import cardGame.game.Solitaire;
-import cardGame.model.Card;
-import cardGame.view.DrawPanel;
-
-import cardGame.controller.ButtonBar;
-import cardGame.controller.CardDragger;
-import cardGame.view.SolitairePanel;
+import java.awt.Dimension;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
-import java.awt.Dimension;
-import java.awt.Color;
+import cardGame.controller.SolitaireDragger;
+import cardGame.game.Solitaire;
+import cardGame.view.SolitairePanel;
+
 
 /**
  * Runs the game. Although technically a controller this class can be found
