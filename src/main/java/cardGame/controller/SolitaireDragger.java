@@ -40,18 +40,17 @@ public class SolitaireDragger extends MouseInputAdapter {
     public void mousePressed(MouseEvent event) {
     	for(int deckNum = 0; deckNum < solitaire.getNumOfDecks(); deckNum++) {
     	    if(solitaire.getMovablePile(deckNum) != null) {
-                int pileHeight = solitaire.getMovablePile(deckNum).size() * panel.getCardSpacing();
                 for (int cardNum = 0; cardNum < solitaire.getMovablePile(deckNum).size(); cardNum++) {
                     if (event.getX() > panel.getMovableX(deckNum) &&
                             event.getX() < panel.getMovableX(deckNum) + panel.cardWidth() &&
-                            event.getY() > panel.getMovableY(deckNum) +
-                                    (pileHeight - panel.getCardSpacing() * (cardNum + 1)) &&
-                            event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() +
-                                    (pileHeight - panel.getCardSpacing() * (cardNum + 1))
+                            event.getY() > panel.getMovableY(deckNum) - panel.getCardSpacing() * (cardNum) &&
+                            event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - panel.getCardSpacing() * (cardNum)
                             ) {
                         selectedDeck = deckNum;
-                        index = cardNum;
+                        index = solitaire.getMovablePile(deckNum).size() - 1 - cardNum;
+                        solitaire.getMovablePile(deckNum).setIndex(index);
                         System.out.println("index pressed " + index + " " + "deck pressed " + selectedDeck);
+                        System.out.println(event.getY() + " " + panel.getMovableY(deckNum) + " " + (panel.getMovableY(deckNum) + panel.cardHeight()));
                         startX = event.getX();
                         startY = event.getY();
                         break;
@@ -76,6 +75,8 @@ public class SolitaireDragger extends MouseInputAdapter {
     				if(panel.inArea(event.getPoint()) == j) {
 		                if (i != j){
 		                    solitaire.move(selectedDeck, j, index);
+                            solitaire.getMovablePile(i).setRelativeX(0);
+                            solitaire.getMovablePile(i).setRelativeY(0);
 		                    break;
 		                } else {
 		                    solitaire.getMovablePile(i).setRelativeX(0);
