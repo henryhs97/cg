@@ -14,6 +14,11 @@ public class MovablePile extends Movable{
         super();
         pile.add(card);
     }
+    
+    public MovablePile(List<Card> cards){ //instead add cards 
+        super();
+        pile.addAll(cards);
+    }
 
     public Card getCard() {
         if(size() == 0)

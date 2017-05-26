@@ -36,24 +36,35 @@ public class Solitaire extends Observable implements Observer{
         }
         return movable;
     }
+    
+    private MovablePile createMainMovablePile(AbstractDeck deck) {
+        MovablePile movable = null;
+        if(!deck.isEmpty()) {
+            movable = new MovablePile(deck.getDeck());
+            movable.addObserver(this);
+        }
+        return movable;
+    }
 
     public Solitaire() {
     	 decks.add(makeCompleteDeck());    	
     	 
+    	 /* makes 7 decks on table */
         for(int i = 1; i <= 7; i++) {     
         	decks.add(makeEmptyDeck());  
         	for(int j = 0; j < i; j++) {
-        		decks.get(i).addOnTop(decks.get(0).draw());
+        		getDeck(i).addOnTop(getDeck(0).draw());
         	}
         }
         
-        System.out.println(decks.size());
+        
+        
         for(int i = 0; i <= 7; i++) {
-            movables.add(createMovablePile(decks.get(i)));
+            movables.add(createMovablePile(getDeck(i)));
         }
         
         
-    	
+    
     }
 
     public AbstractDeck getDeck(int deckNumber) {

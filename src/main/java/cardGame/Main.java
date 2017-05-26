@@ -19,7 +19,8 @@ public class Main {
         JFrame frame = new JFrame("Card game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         SolitairePanel panel = new SolitairePanel(solitaire);
-        SolitaireDragger sd = new SolitaireDragger(solitaire, panel);
+        @SuppressWarnings("unused")
+		SolitaireDragger sd = new SolitaireDragger(solitaire, panel);
         frame.getContentPane().add(panel);
         frame.setPreferredSize(new Dimension(800, 600));
         frame.pack();

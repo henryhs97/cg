@@ -33,6 +33,25 @@ abstract public class AbstractDeck implements Emptiable, Sized {
     private Random random;
     
     /**
+     * Returns the list of cards
+     */
+    public List<Card> getDeck() {
+        return cards;
+    }
+    
+    /**
+     * Returns the list of cards from index 0 to idx, 
+     * excluding idx. Also removes them from the original deck
+     */
+    public List<Card> splitDeckAt(int idx) {      	
+    	List<Card> removedCards = new ArrayList<>(); 
+    	removedCards.addAll(cards.subList(0, cards.size()));
+    	this.cards.removeAll(removedCards);
+        return removedCards;
+    }
+    
+    
+    /**
      * Create a new deck with no cards
      */
     public AbstractDeck() {
