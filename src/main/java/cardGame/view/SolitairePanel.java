@@ -1,10 +1,9 @@
 package cardGame.view;
 
-import cardGame.game.Draw;
-import cardGame.game.MovableCard;
+import cardGame.game.Movable;
+import cardGame.game.MovablePile;
 import cardGame.game.Solitaire;
 import cardGame.model.Card;
-import com.sun.org.apache.xpath.internal.functions.FuncFloor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -88,7 +87,7 @@ public class SolitairePanel extends JPanel implements Observer {
             }
         }
         for(int deckNum = 0; deckNum < numDecks; deckNum++) {
-            MovableCard dependency = solitaire.getMovableCard(deckNum);
+            Movable dependency = solitaire.getMovableCard(deckNum);
             if(dependency != null && (dependency.getRelativeX() != 0 || dependency.getRelativeY() != 0)) {
                 currMovable = deckNum;
             }else
@@ -96,7 +95,7 @@ public class SolitairePanel extends JPanel implements Observer {
                 movableX = getSpacing() + deckNum * getWidth() / numDecks + dependency.getRelativeX();
                 movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(deckNum).size()
                         + dependency.getRelativeY();
-                g.drawImage(CardBackTextures.getTexture(CardBack.CARD_BACK_BLUE)
+                g.drawImage(CardTextures.getTexture(solitaire.getMovableCard(deckNum).getCard())
                         , movableX, movableY, cardWidth(), cardHeight(), this);
                 g.drawRect(movableX, movableY, cardWidth(), cardHeight());
                 movablesX.set(deckNum, movableX);
@@ -104,12 +103,12 @@ public class SolitairePanel extends JPanel implements Observer {
             }
         }
         if(currMovable != -1) {
-            MovableCard dependency = solitaire.getMovableCard(currMovable);
+            Movable dependency = solitaire.getMovableCard(currMovable);
             if (dependency != null && (dependency.getRelativeX() != 0 || dependency.getRelativeY() != 0)) {
                 movableX = getSpacing() + currMovable * getWidth() / numDecks + dependency.getRelativeX();
                 movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(currMovable).size()
                         + dependency.getRelativeY();
-                g.drawImage(CardBackTextures.getTexture(CardBack.CARD_BACK_BLUE)
+                g.drawImage(CardTextures.getTexture(solitaire.getMovableCard(currMovable).getCard())
                         , movableX, movableY, cardWidth(), cardHeight(), this);
                 g.drawRect(movableX, movableY, cardWidth(), cardHeight());
                 movablesX.set(currMovable, movableX);
@@ -118,6 +117,12 @@ public class SolitairePanel extends JPanel implements Observer {
         }
 
 
+        for(int deckNum = 0; deckNum < numDecks; deckNum++) {
+            MovablePile dependency = solitaire.getMovablePile(deckNum);
+            for (depth = 0; depth < solitaire.getMovablePile(deckNum).size(); ++depth) {
+
+            }
+        }
     }
 
     @Override

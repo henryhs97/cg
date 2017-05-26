@@ -2,7 +2,6 @@ package cardGame.game;
 
 import cardGame.model.AbstractDeck;
 import cardGame.model.CompleteDeck;
-import cardGame.model.Card;
 import cardGame.model.DiscardPile;
 
 import java.util.Observable;
