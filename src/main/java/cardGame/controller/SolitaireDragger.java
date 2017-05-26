@@ -39,20 +39,22 @@ public class SolitaireDragger extends MouseInputAdapter {
     @Override
     public void mousePressed(MouseEvent event) {
     	for(int deckNum = 0; deckNum < solitaire.getNumOfDecks(); deckNum++) {
-    	    int pileHeight = solitaire.getMovablePile(deckNum).size() * panel.getSpacing();
-            for (int cardNum = 0; cardNum < solitaire.getMovablePile(deckNum).size(); cardNum++) {
-                if (    event.getX() > panel.getMovableX(deckNum) &&
-                        event.getX() < panel.getMovableX(deckNum) + panel.cardWidth() &&
-                        event.getY() > panel.getMovableY(deckNum) +
-                                (pileHeight - panel.getSpacing() * (cardNum + 1)) &&
-                        event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() +
-                                (pileHeight - panel.getSpacing() * (cardNum + 1))
-                        ) {
-                    selectedDeck = deckNum;
-                    index = cardNum;
-                    startX = event.getX();
-                    startY = event.getY();
-                    break;
+    	    if(solitaire.getMovablePile(deckNum) != null) {
+                int pileHeight = solitaire.getMovablePile(deckNum).size() * panel.getSpacing();
+                for (int cardNum = 0; cardNum < solitaire.getMovablePile(deckNum).size(); cardNum++) {
+                    if (event.getX() > panel.getMovableX(deckNum) &&
+                            event.getX() < panel.getMovableX(deckNum) + panel.cardWidth() &&
+                            event.getY() > panel.getMovableY(deckNum) +
+                                    (pileHeight - panel.getSpacing() * (cardNum + 1)) &&
+                            event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() +
+                                    (pileHeight - panel.getSpacing() * (cardNum + 1))
+                            ) {
+                        selectedDeck = deckNum;
+                        index = cardNum;
+                        startX = event.getX();
+                        startY = event.getY();
+                        break;
+                    }
                 }
             }
         }

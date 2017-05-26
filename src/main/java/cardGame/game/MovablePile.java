@@ -15,6 +15,8 @@ public class MovablePile extends Movable{
     }
 
     public Card getCard() {
+        if(size() == 0)
+            return null;
         return pile.get(pile.size() - 1);
     }
 

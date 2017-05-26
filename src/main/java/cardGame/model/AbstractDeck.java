@@ -58,7 +58,8 @@ abstract public class AbstractDeck implements Emptiable, Sized {
      * Place a card back on the deck at the top of the deck
      */
     public void addOnTop(Card card) {
-        cards.add(card);
+        if(card != null)
+            cards.add(card);
     }
     
     /**

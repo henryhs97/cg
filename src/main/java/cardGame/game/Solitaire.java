@@ -64,13 +64,15 @@ public class Solitaire extends Observable implements Observer{
 
     public void move(int from, int to) {
         if(movables.get(from) != null) {
-            if(decks.get(to).isEmpty() != true) {
-                decks.get(to).addOnTop(movables.get(to).getCard());
-            }
+            decks.get(to).addOnTop(movables.get(to).getCard());
             decks.get(to).addOnTop(movables.get(from).getCard());
-            if(decks.get(from).isEmpty() != true) {
+
+            if(decks.get(from).isEmpty()){
+                movables.set(from, null);
+            }else {
                 movables.set(from, createMovablePile(decks.get(from)));
             }
+
             movables.set(to,createMovablePile(decks.get(to)));
         }
         setChanged();
