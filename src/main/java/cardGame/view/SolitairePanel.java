@@ -93,8 +93,7 @@ public class SolitairePanel extends JPanel implements Observer {
             MovablePile dependency = solitaire.getMovablePile(deckNum);
             if(dependency != null && (dependency.getRelativeX() != 0 || dependency.getRelativeY() != 0)) {
                 currMovable = deckNum;
-            }else
-            if (dependency != null) {
+            }else if (dependency != null) {
                 for (depth = 0; depth < solitaire.getMovablePile(deckNum).size(); ++depth) {
                     movableX = getSpacing() + deckNum * getWidth() / numDecks + dependency.getRelativeX();
                     movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(deckNum).size() + CARD_SPACING * depth
@@ -106,7 +105,6 @@ public class SolitairePanel extends JPanel implements Observer {
                     movablesY.set(deckNum, movableY);
                 }
             }
-
         }
         if(currMovable != -1) {
             MovablePile dependency = solitaire.getMovablePile(currMovable);
