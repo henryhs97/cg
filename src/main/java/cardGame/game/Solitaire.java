@@ -1,6 +1,7 @@
 package cardGame.game;
 
 import cardGame.model.AbstractDeck;
+import cardGame.model.Card;
 import cardGame.model.CompleteDeck;
 
 import java.util.ArrayList;
@@ -46,8 +47,22 @@ public class Solitaire extends Observable implements Observer{
     public Solitaire() {
         for(int i = 0; i < 7; i++) {
             decks.add(makeDeck());
+        }
+        decks.get(0).addOnTop(Card.ACE_CLUBS);
+        decks.get(1).addOnTop(Card.ACE_DIAMONDS);
+
+        decks.get(2).addOnTop(Card.ACE_HEARTS);
+
+        decks.get(3).addOnTop(Card.ACE_SPADES);
+
+        decks.get(4).addOnTop(Card.TEN_CLUBS);
+
+        decks.get(5).addOnTop(Card.TWO_CLUBS);
+        decks.get(6).addOnTop(Card.THREE_CLUBS);
+        for(int i = 0; i < 7; i++) {
             movables.add(createMovablePile(decks.get(i)));
         }
+
     }
 
     public AbstractDeck getDeck(int deckNumber) {
@@ -64,6 +79,9 @@ public class Solitaire extends Observable implements Observer{
 
     public void move(int from, int to, int index) {
         movables.get(to).addOnTop(movables.get(from).splitAt(index));
+        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()){
+            movables.get(from).addOnTop(decks.get(from).draw());
+        }
         setChanged();
         notifyObservers();
     }

@@ -25,7 +25,6 @@ public class SolitairePanel extends JPanel implements Observer {
 
     private List<Integer> movablesY = new ArrayList<>();
 
-
     public int getMovableX (int card){ return movablesX.get(card); }
 
     public int getMovableY (int card){ return movablesY.get(card); }
@@ -96,30 +95,36 @@ public class SolitairePanel extends JPanel implements Observer {
             }else
             if (dependency != null) {
                 for (depth = 0; depth < solitaire.getMovablePile(deckNum).size(); ++depth) {
-                    movableX = getSpacing() + deckNum * getWidth() / numDecks + dependency.getRelativeX();
-                    movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(deckNum).size() + CARD_SPACING * depth
-                            + dependency.getRelativeY();
+                    movableX = getSpacing() + deckNum * getWidth() / numDecks;
+                    movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(deckNum).size() + CARD_SPACING * depth;
                     g.drawImage(CardTextures.getTexture(solitaire.getMovablePile(deckNum).getCardAt(depth))
                             , movableX, movableY, cardWidth(), cardHeight(), this);
                     g.drawRect(movableX, movableY, cardWidth(), cardHeight());
-                    movablesX.set(deckNum, movableX);
-                    movablesY.set(deckNum, movableY);
                 }
+                movablesX.set(deckNum, movableX);
+                movablesY.set(deckNum, movableY);
             }
-
         }
         if(currMovable != -1) {
             MovablePile dependency = solitaire.getMovablePile(currMovable);
-            for (depth = 0; depth < solitaire.getMovablePile(currMovable).size(); ++depth) {
+            int index = solitaire.getMovablePile(currMovable).getIndex();
+            for (depth = 0; depth < index; ++depth) {
+                movableX = getSpacing() + currMovable * getWidth() / numDecks;
+                movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(currMovable).size() + CARD_SPACING * depth;
+                g.drawImage(CardTextures.getTexture(solitaire.getMovablePile(currMovable).getCardAt(depth))
+                        , movableX, movableY, cardWidth(), cardHeight(), this);
+                g.drawRect(movableX, movableY, cardWidth(), cardHeight());
+            }
+            for (depth = index; depth < solitaire.getMovablePile(currMovable).size(); ++depth) {
                 movableX = getSpacing() + currMovable * getWidth() / numDecks + dependency.getRelativeX();
                 movableY = getSpacing() + CARD_SPACING * solitaire.getDeck(currMovable).size() + CARD_SPACING * depth
                         + dependency.getRelativeY();
                 g.drawImage(CardTextures.getTexture(solitaire.getMovablePile(currMovable).getCardAt(depth))
                         , movableX, movableY, cardWidth(), cardHeight(), this);
                 g.drawRect(movableX, movableY, cardWidth(), cardHeight());
-                movablesX.set(currMovable, movableX);
-                movablesY.set(currMovable, movableY);
             }
+            movablesX.set(currMovable, movableX);
+            movablesY.set(currMovable, movableY);
         }
     }
 
