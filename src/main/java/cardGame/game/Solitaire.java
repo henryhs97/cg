@@ -58,9 +58,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
         }
         
 
-        
-        
-        
+        /* create them movable on top */
         for(int i = 0; i <= 7; i++) {
             movables.add(createMovablePile(getDeck(i)));
         }
@@ -108,12 +106,9 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     	case 9:
     	case 10:
     	case 11: 
-    		validMovetoBuildingPiles(movingTo, selectedCard);
-    		break;
-    	default: validMovetoTableauDeck(movingTo, selectedCard);
+    		return validMovetoBuildingPiles(movingTo, selectedCard);
+    	default: return validMovetoTableauDeck(movingTo, selectedCard);
     	}
-    	
-    	return true;
     }
 
     public boolean validMovetoTableauDeck(Card movingTo, Card selectedCard) {   	
