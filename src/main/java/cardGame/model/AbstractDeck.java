@@ -14,7 +14,7 @@ import java.util.Collection;
  */
 abstract public class AbstractDeck implements Emptiable, Sized {
     
-    private static int seed = 42;
+    private static int seed = 32;
     /**
      * To allow slight variation in the way games play out, the seed used
      * is changed every time, but it is seeded to allow reproducible results
@@ -148,6 +148,13 @@ abstract public class AbstractDeck implements Emptiable, Sized {
             return cards.remove(cards.size() - 1);
         return null;
     }
+    
+    public Card getTopCard() {
+        if(!isEmpty())
+            return cards.get(cards.size() - 1);
+        return null;
+    }
+    
     
     
 }

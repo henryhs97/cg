@@ -49,7 +49,7 @@ public class SolitaireDragger extends MouseInputAdapter {
                         selectedDeck = deckNum;
                         index = solitaire.getMovablePile(deckNum).size() - 1 - cardNum;
                         solitaire.getMovablePile(deckNum).setIndex(index);
-                        System.out.println("index pressed " + index + " " + "deck pressed " + selectedDeck);
+                        System.out.println("card number is" + solitaire.getMovablePile(deckNum).getCard().getSuit() );
                         System.out.println(event.getY() + " " + panel.getMovableY(deckNum) + " " + (panel.getMovableY(deckNum) + panel.cardHeight()));
                         startX = event.getX();
                         startY = event.getY();

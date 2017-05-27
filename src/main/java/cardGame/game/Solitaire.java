@@ -11,7 +11,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 
-public class Solitaire extends Observable implements Observer{
+public class Solitaire extends Observable implements Observer, SolitaireRules{
 
     private List<AbstractDeck> decks = new ArrayList<>();
     private List<MovablePile> movables = new ArrayList<>();
@@ -57,6 +57,8 @@ public class Solitaire extends Observable implements Observer{
         	}
         }
         
+
+        
         
         
         for(int i = 0; i <= 7; i++) {
@@ -80,12 +82,14 @@ public class Solitaire extends Observable implements Observer{
     public int getNumOfDecks() { return decks.size(); }
 
     public void move(int from, int to, int index) {
-        movables.get(to).addOnTop(movables.get(from).splitAt(index));
-        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()){
-            movables.get(from).addOnTop(decks.get(from).draw());
-        }
-        setChanged();
-        notifyObservers();
+    	if(validMove(from, to, index)) {
+	        movables.get(to).addOnTop(movables.get(from).splitAt(index));
+	        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()){
+	            movables.get(from).addOnTop(decks.get(from).draw());
+	        }
+	        setChanged();
+	        notifyObservers();
+    	}
     }
 
     @Override
@@ -93,4 +97,54 @@ public class Solitaire extends Observable implements Observer{
         setChanged();
         notifyObservers();
     }
+    
+    public boolean validMove(int from, int to, int index) {
+    	Card movingTo = movables.get(to).getCard();
+    	Card selectedCard = movables.get(from).getCardAt(index);
+    	switch(to) {
+    	case 0: 
+    		return false; //to main deck
+    	case 8: 
+    	case 9:
+    	case 10:
+    	case 11: 
+    		validMovetoBuildingPiles(movingTo, selectedCard);
+    		break;
+    	default: validMovetoTableauDeck(movingTo, selectedCard);
+    	}
+    	
+    	return true;
+    }
+
+    public boolean validMovetoTableauDeck(Card movingTo, Card selectedCard) {   	
+    	int numberOfMovingTo = movingTo.getFace().ordinal();
+    	int numberOfSelectedCard = selectedCard.getFace().ordinal();
+		if(movingTo != null && numberOfMovingTo-1 == numberOfSelectedCard
+				&& movingTo.getColour() != selectedCard.getColour()) { //only two card colors
+			return true;
+		}		
+		return false;
+	}
+
+	@Override
+	public boolean validMovetoBuildingPiles(Card movingTo, Card selectedCard) {
+		int numberOfMovingTo = movingTo.getFace().ordinal();
+    	int numberOfSelectedCard = selectedCard.getFace().ordinal();
+    	
+		if(movingTo == null && numberOfSelectedCard == 0) //is it the first one?
+			return true;
+		
+		if(numberOfMovingTo-1 == numberOfSelectedCard && movingTo.getSuit() == selectedCard.getSuit())
+			return true;
+			
+		return false;
+	}
+
+	@Override
+	public boolean didYouWin() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
 }
