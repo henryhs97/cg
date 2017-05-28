@@ -1,6 +1,5 @@
 package cardGame.view;
 
-import cardGame.game.Movable;
 import cardGame.game.MovablePile;
 import cardGame.game.Solitaire;
 import cardGame.model.Card;
@@ -11,14 +10,13 @@ import java.util.*;
 import java.util.List;
 
 /**
- * Created by sibdoo on 22/05/2017.
+ * 
  */
 public class SolitairePanel extends JPanel implements Observer {
 
-
-    private static final int BIG_CARD_SPACING = 20; //pixels
+	private static final long serialVersionUID = 1L;
+	private static final int BIG_CARD_SPACING = 20; //pixels
     private static final int SMALL_CARD_SPACING = 2; //pixels
-    private static final int Y_OFFSET = Card.values().length * BIG_CARD_SPACING;
 
     private Solitaire solitaire;
 

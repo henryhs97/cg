@@ -37,29 +37,29 @@ public class SolitaireDragger extends MouseInputAdapter {
      * that card is 'selected' so it can be dragged.
      */
     @Override
-    public void mousePressed(MouseEvent event) {
-    	for(int deckNum = 0; deckNum < solitaire.getNumOfTotalDecks(); deckNum++) {
-    	    if(solitaire.getMovablePile(deckNum) != null) {
-                for (int cardNum = 0; cardNum < solitaire.getMovablePile(deckNum).size(); cardNum++) {
-                    if (event.getX() > panel.getMovableX(deckNum) &&
-                            event.getX() < panel.getMovableX(deckNum) + panel.cardWidth() &&
-                            event.getY() > panel.getMovableY(deckNum) - panel.getCardSpacing() * (cardNum) &&
-                            event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - panel.getCardSpacing() * (cardNum)
-                            ) {
-                        selectedDeck = deckNum;
-                        System.out.println("the selected deck is " + selectedDeck);
-                        index = solitaire.getMovablePile(deckNum).size() - 1 - cardNum;
-                        System.out.println("THE INDEX IS" + index);
-                        solitaire.getMovablePile(deckNum).setIndex(index);
-                        System.out.println("card number is" + solitaire.getMovablePile(deckNum).getCard().getSuit() );
-                        System.out.println(event.getY() + " " + panel.getMovableY(deckNum) + " " + (panel.getMovableY(deckNum) + panel.cardHeight()));
-                        startX = event.getX();
-                        startY = event.getY();
-                        break;
-                    }
+    public void mousePressed(MouseEvent event) {   	
+    	int deckNum= panel.inArea(event.getPoint());
+	    if(solitaire.getMovablePile(deckNum) != null) {
+            for (int cardNum = 0; cardNum < solitaire.getMovablePile(deckNum).size(); cardNum++) {
+                if (event.getX() > panel.getMovableX(deckNum) &&
+                        event.getX() < panel.getMovableX(deckNum) + panel.cardWidth() &&
+                        event.getY() > panel.getMovableY(deckNum) - panel.getCardSpacing() * (cardNum) &&
+                        event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - panel.getCardSpacing() * (cardNum)
+                        ) {
+                    selectedDeck = deckNum;
+                    System.out.println("the selected deck is " + selectedDeck);
+                    index = solitaire.getMovablePile(deckNum).size() - 1 - cardNum;
+                    System.out.println("THE INDEX IS" + index);
+                    solitaire.getMovablePile(deckNum).setIndex(index);
+                    System.out.println("card number is" + solitaire.getMovablePile(deckNum).getCard().getSuit() );
+                    System.out.println(event.getY() + " " + panel.getMovableY(deckNum) + " " + (panel.getMovableY(deckNum) + panel.cardHeight()));
+                    startX = event.getX();
+                    startY = event.getY();
+                    break;
                 }
             }
         }
+        
     }
 
     /**
