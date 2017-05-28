@@ -84,8 +84,15 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     public int getNumOfColumnDecks() { return decks.size()-3; }
 
     public void move(int from, int to, int index) {
+    	if(from == 0 && to == 0 && !movables.get(0).isEmpty()) {
+    		decks.get(0).addOnBottom(movables.get(0).removeCard());
+    		movables.get(0).addOnTop(decks.get(0).draw());
+    		setChanged();
+	        notifyObservers();
+    	}
+    	
     	if(validMove(from, to, index)) 
-    	{
+    	{		
 	        movables.get(to).addOnTop(movables.get(from).splitAt(index));
 	        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()){
 	            movables.get(from).addOnTop(decks.get(from).draw());
@@ -103,9 +110,9 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     
     public boolean validMove(int from, int to, int index) {
     	Card movingTo = movables.get(to).getCard();
-    	System.out.println("FROM IS "+ from + "INDEX IS "+ index );
     	Card selectedCard = movables.get(from).getCardAt(index);
-    	//System.out.println("selected card is " + selectedCard + "moving to is " + movingTo);
+    	
+    	
     	switch(to) {
     	case 0: 
     		return false; //to main deck

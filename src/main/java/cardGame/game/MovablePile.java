@@ -33,6 +33,13 @@ public class MovablePile extends Movable{
         }
         return pile.get(index);
     }
+    
+    public Card removeCard(){
+        if(index >= pile.size()) {
+            return null;
+        }
+        return pile.remove(pile.size() - 1);
+    }
 
     public int size() {
         return pile.size();
@@ -60,6 +67,10 @@ public class MovablePile extends Movable{
 
     public void setIndex(int index){
         this.index = index;
+    }
+    
+    public boolean isEmpty() {
+    	return pile.isEmpty();
     }
 
     public int getIndex() {

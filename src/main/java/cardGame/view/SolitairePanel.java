@@ -156,7 +156,6 @@ public class SolitairePanel extends JPanel implements Observer {
         
         //something is currently moving, so draw it while it moves
         if(currMovable != -1) {
-        	System.out.println("the current movable is " + currMovable);
             MovablePile dependency = solitaire.getMovablePile(currMovable);
             int index = solitaire.getMovablePile(currMovable).getIndex(); //start moving from where?
             for (depth = 0; depth < index; ++depth) { //only paint until before the index
