@@ -103,8 +103,9 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     
     public boolean validMove(int from, int to, int index) {
     	Card movingTo = movables.get(to).getCard();
+    	System.out.println("FROM IS "+ from + "INDEX IS "+ index );
     	Card selectedCard = movables.get(from).getCardAt(index);
-    	System.out.println("selected card is " + selectedCard + "moving to is " + movingTo);
+    	//System.out.println("selected card is " + selectedCard + "moving to is " + movingTo);
     	switch(to) {
     	case 0: 
     		return false; //to main deck

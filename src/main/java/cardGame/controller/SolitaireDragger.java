@@ -49,6 +49,7 @@ public class SolitaireDragger extends MouseInputAdapter {
                         selectedDeck = deckNum;
                         System.out.println("the selected deck is " + selectedDeck);
                         index = solitaire.getMovablePile(deckNum).size() - 1 - cardNum;
+                        System.out.println("THE INDEX IS" + index);
                         solitaire.getMovablePile(deckNum).setIndex(index);
                         System.out.println("card number is" + solitaire.getMovablePile(deckNum).getCard().getSuit() );
                         System.out.println(event.getY() + " " + panel.getMovableY(deckNum) + " " + (panel.getMovableY(deckNum) + panel.cardHeight()));
@@ -70,22 +71,21 @@ public class SolitaireDragger extends MouseInputAdapter {
      */
     @Override
     public void mouseReleased(MouseEvent event) {
-
-    			for(int j = 0; j < solitaire.getNumOfTotalDecks(); j++) {
-    				if(panel.inArea(event.getPoint()) == j) { //which area?
-		                if (selectedDeck != j){
-		                    solitaire.move(selectedDeck, j, index);
-                            solitaire.getMovablePile(selectedDeck).setRelativeX(0);
-                            solitaire.getMovablePile(selectedDeck).setRelativeY(0);
-		                    break;
-		                } else {
-		                    solitaire.getMovablePile(selectedDeck).setRelativeX(0);
-		                    solitaire.getMovablePile(selectedDeck).setRelativeY(0);
-		                    break;
-		                }
-    				}
+    	if(selectedDeck!= -1) {
+    		for(int j = 0; j < solitaire.getNumOfTotalDecks(); j++) {
+    			if(panel.inArea(event.getPoint()) == j) { //which area?
+    				if (selectedDeck != j){
+    					solitaire.move(selectedDeck, j, index);
+                        solitaire.getMovablePile(selectedDeck).setRelativeX(0);
+                        solitaire.getMovablePile(selectedDeck).setRelativeY(0);
+		            } else {
+		                solitaire.getMovablePile(selectedDeck).setRelativeX(0);
+		                solitaire.getMovablePile(selectedDeck).setRelativeY(0);       
+		            }
+		            break;
     			}
-    		
+    		}
+    	}	
         selectedDeck = -1;
     }
 
