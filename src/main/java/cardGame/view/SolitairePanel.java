@@ -97,6 +97,9 @@ public class SolitairePanel extends JPanel implements Observer {
                 g.drawRect(posX, posY, cardWidth(), cardHeight());
             }
         }
+        
+
+        
         /* for each deck on the table, it creates a movable pile */
         for(int deckNum = 0; deckNum < numDecks; deckNum++) {
             MovablePile dependency = solitaire.getMovablePile(deckNum);

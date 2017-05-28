@@ -12,7 +12,8 @@ public class MovablePile extends Movable{
 
     public MovablePile(Card card){
         super();
-        pile.add(card);
+        //if(card != null)
+        	pile.add(card);
     }
     
     public MovablePile(List<Card> cards){ //instead add cards 
@@ -39,9 +40,11 @@ public class MovablePile extends Movable{
 
     public List<Card> splitAt(int index){
         List<Card> removedCards = new ArrayList<>();
-        removedCards.addAll(pile.subList(index, pile.size()));
-        System.out.println("index split "+  index + " " + "size of split pile" + pile.size());
-        this.pile.removeAll(removedCards);
+        if(pile.size()-index > 0) {
+	        removedCards.addAll(pile.subList(index, pile.size()));
+	        System.out.println("index split "+  index + " " + "size of split pile" + pile.size());
+	        this.pile.removeAll(removedCards);
+        }
         return removedCards;
     }
 
@@ -50,7 +53,9 @@ public class MovablePile extends Movable{
     }
 
     public void addOnTop(List<Card> cards) {
-        this.pile.addAll(cards);
+    	if(cards.size()>0) {
+    		this.pile.addAll(cards);
+    	}
     }
 
     public void setIndex(int index){

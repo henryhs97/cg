@@ -34,16 +34,12 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
         if(!deck.isEmpty()) {
             movable = new MovablePile(deck.draw());
             movable.addObserver(this);
-        }
-        return movable;
-    }
-    
-    private MovablePile createMainMovablePile(AbstractDeck deck) {
-        MovablePile movable = null;
-        if(!deck.isEmpty()) {
-            movable = new MovablePile(deck.getDeck());
+        } else {
+        	movable = new MovablePile(deck.draw());
             movable.addObserver(this);
         }
+       
+        
         return movable;
     }
 
@@ -51,16 +47,22 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     	 decks.add(makeCompleteDeck());    	
     	 
     	 /* makes 7 decks on table */
-        for(int i = 1; i <= 7; i++) {     
+        for(int i = 1; i < 8; i++) {     
         	decks.add(makeEmptyDeck());  
         	for(int j = 0; j < i; j++) {
         		getDeck(i).addOnTop(getDeck(0).draw());
         	}
         }
         
+        for(int i = 8; i < 12; i++) {     
+        	decks.add(makeEmptyDeck());  
+        	getDeck(i).addOnTop(getDeck(0).draw());
+        	getDeck(i).draw();
+        }
+        
 
         /* create them movable on top */
-        for(int i = 0; i <= 7; i++) {
+        for(int i = 0; i < 12; i++) {
             movables.add(createMovablePile(getDeck(i)));
         }
         
@@ -81,7 +83,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     public int getNumOfDecks() { return decks.size(); }
 
     public void move(int from, int to, int index) {
-    	if(validMove(from, to, index)) 
+    	//if(validMove(from, to, index)) 
     	{
 	        movables.get(to).addOnTop(movables.get(from).splitAt(index));
 	        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()){

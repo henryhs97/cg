@@ -77,8 +77,9 @@ abstract public class AbstractDeck implements Emptiable, Sized {
      * Place a card back on the deck at the top of the deck
      */
     public void addOnTop(Card card) {
-        if(card != null)
+        if(card != null) {
             cards.add(card);
+        }
     }
     
     /**
@@ -86,14 +87,18 @@ abstract public class AbstractDeck implements Emptiable, Sized {
      * this is slower than putting the card on top.
      */
     public void addOnBottom(Card card) {
-        cards.add(0, card);
+        if(card != null) {
+        	cards.add(0, card);
+        }
     }
     
     /**
      * Puts a card anywhere in the deck
      */
     public void addAnywhere(Card card) {
-        cards.add(random.nextInt(cards.size()), card);
+    	if(card != null) {
+    		cards.add(random.nextInt(cards.size()), card);
+    	}
     }
     
     /**
