@@ -14,7 +14,7 @@ import java.util.Collection;
  */
 abstract public class AbstractDeck implements Emptiable, Sized {
     
-    private static int seed = 32;
+    private static int seed = 35;
     /**
      * To allow slight variation in the way games play out, the seed used
      * is changed every time, but it is seeded to allow reproducible results

@@ -4,6 +4,7 @@ import cardGame.model.AbstractDeck;
 import cardGame.model.Card;
 import cardGame.model.CompleteDeck;
 import cardGame.model.EmptyDeck;
+import cardGame.model.Card.Face;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +81,8 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     public int getNumOfDecks() { return decks.size(); }
 
     public void move(int from, int to, int index) {
-    	if(validMove(from, to, index)) {
+    	if(validMove(from, to, index)) 
+    	{
 	        movables.get(to).addOnTop(movables.get(from).splitAt(index));
 	        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()){
 	            movables.get(from).addOnTop(decks.get(from).draw());
@@ -99,46 +101,60 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     public boolean validMove(int from, int to, int index) {
     	Card movingTo = movables.get(to).getCard();
     	Card selectedCard = movables.get(from).getCardAt(index);
+    	System.out.println("selected card is " + selectedCard + "moving to is " + movingTo);
     	switch(to) {
     	case 0: 
     		return false; //to main deck
-    	case 8: 
-    	case 9:
-    	case 10:
-    	case 11: 
-    		return validMovetoBuildingPiles(movingTo, selectedCard);
-    	default: return validMovetoTableauDeck(movingTo, selectedCard);
+    	case 8: case 9: case 10: case 11: 
+    		if(validMoveToBuildingPiles(movingTo, selectedCard)) {
+    			if(didYouWin()) {
+    				//do something
+    			} else {
+    				return true;
+    			}  				
+    		}
+    		
+    	default: return validMoveToTableauDeck(movingTo, selectedCard);
     	}
     }
 
-    public boolean validMovetoTableauDeck(Card movingTo, Card selectedCard) {   	
-    	int numberOfMovingTo = movingTo.getFace().ordinal();
-    	int numberOfSelectedCard = selectedCard.getFace().ordinal();
-		if(movingTo != null && numberOfMovingTo-1 == numberOfSelectedCard
-				&& movingTo.getColour() != selectedCard.getColour()) { //only two card colors
+    public boolean validMoveToTableauDeck(Card movingTo, Card selectedCard) {   
+    	if(movingTo != null) {
+	    	int numberOfMovingTo = movingTo.getFace().ordinal();
+	    	int numberOfSelectedCard = selectedCard.getFace().ordinal();
+			if(numberOfMovingTo-1 == numberOfSelectedCard
+					&& movingTo.getColour() != selectedCard.getColour()) { //only two card colors
+				return true;
+			}	
+    	}
+		if(movingTo == null && selectedCard.getFace() == Card.Face.KING) { //is it the first one? only king allowed			
 			return true;
-		}		
+		}
 		return false;
 	}
 
 	@Override
-	public boolean validMovetoBuildingPiles(Card movingTo, Card selectedCard) {
+	public boolean validMoveToBuildingPiles(Card movingTo, Card selectedCard) {
+		if(movingTo == null && selectedCard.getFace() == Card.Face.ACE) { //is it the first one? 
+			return true;
+		}
 		int numberOfMovingTo = movingTo.getFace().ordinal();
     	int numberOfSelectedCard = selectedCard.getFace().ordinal();
-    	
-		if(movingTo == null && numberOfSelectedCard == 0) //is it the first one?
+	
+		if(numberOfMovingTo-1 == numberOfSelectedCard && movingTo.getSuit() == selectedCard.getSuit()) {
 			return true;
-		
-		if(numberOfMovingTo-1 == numberOfSelectedCard && movingTo.getSuit() == selectedCard.getSuit())
-			return true;
-			
+		}	
 		return false;
 	}
 
 	@Override
 	public boolean didYouWin() {
-		// TODO Auto-generated method stub
-		return false;
+		for(int i = 8 ; i < 12 ; i++) {
+			if(decks.get(i).getTopCard().getFace() != Card.Face.KING) {
+				return false;
+			}
+		}
+		return true;	
 	}
 
 
