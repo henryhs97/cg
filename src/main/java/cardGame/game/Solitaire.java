@@ -56,8 +56,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
         
         for(int i = 8; i < 12; i++) {     
         	decks.add(makeEmptyDeck());  
-        	getDeck(i).addOnTop(getDeck(0).draw());
-        	getDeck(i).draw();
+        	//getDeck(i).addOnTop(getDeck(0).draw());
         }
         
 
@@ -80,10 +79,12 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 
     public MovablePile getMovablePile(int deckNumber) { return movables.get(deckNumber); }
 
-    public int getNumOfDecks() { return decks.size(); }
+    public int getNumOfTotalDecks() { return decks.size(); }
+    
+    public int getNumOfColumnDecks() { return decks.size()-3; }
 
     public void move(int from, int to, int index) {
-    	//if(validMove(from, to, index)) 
+    	if(validMove(from, to, index)) 
     	{
 	        movables.get(to).addOnTop(movables.get(from).splitAt(index));
 	        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()){
@@ -140,6 +141,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 		if(movingTo == null && selectedCard.getFace() == Card.Face.ACE) { //is it the first one? 
 			return true;
 		}
+		else if(movingTo == null) return false;
 		int numberOfMovingTo = movingTo.getFace().ordinal();
     	int numberOfSelectedCard = selectedCard.getFace().ordinal();
 	
@@ -151,8 +153,10 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 
 	@Override
 	public boolean didYouWin() {
+		
 		for(int i = 8 ; i < 12 ; i++) {
-			if(decks.get(i).getTopCard().getFace() != Card.Face.KING) {
+			Card topCard = decks.get(i).getTopCard();
+			if(topCard == null || topCard.getFace() != Card.Face.KING) {
 				return false;
 			}
 		}
