@@ -70,25 +70,22 @@ public class SolitaireDragger extends MouseInputAdapter {
      */
     @Override
     public void mouseReleased(MouseEvent event) {
-    	for(int i = 0; i < solitaire.getNumOfTotalDecks(); i++) {
-    		if(i == selectedDeck) {
+
     			for(int j = 0; j < solitaire.getNumOfTotalDecks(); j++) {
-    				if(panel.inArea(event.getPoint()) == j) {
-		                if (i != j){
+    				if(panel.inArea(event.getPoint()) == j) { //which area?
+		                if (selectedDeck != j){
 		                    solitaire.move(selectedDeck, j, index);
-                            solitaire.getMovablePile(i).setRelativeX(0);
-                            solitaire.getMovablePile(i).setRelativeY(0);
+                            solitaire.getMovablePile(selectedDeck).setRelativeX(0);
+                            solitaire.getMovablePile(selectedDeck).setRelativeY(0);
 		                    break;
 		                } else {
-		                    solitaire.getMovablePile(i).setRelativeX(0);
-		                    solitaire.getMovablePile(i).setRelativeY(0);
+		                    solitaire.getMovablePile(selectedDeck).setRelativeX(0);
+		                    solitaire.getMovablePile(selectedDeck).setRelativeY(0);
 		                    break;
 		                }
     				}
     			}
-    			break;
-    		}
-    	}
+    		
         selectedDeck = -1;
     }
 
