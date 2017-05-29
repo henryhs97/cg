@@ -80,6 +80,9 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
      */
     public void move(int from, int to, int index) {
     	/* Special case for main deck */
+    	if(won){
+    		return;
+		}
     	if(from == 0 && to == 0 && !movables.get(0).isEmpty()) {
     		getDeck(0).addOnBottom(movables.get(0).removeTopCard());
     		movables.get(0).addOnTop(getDeck(0).draw());
@@ -88,6 +91,9 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 	        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()) {
 	            movables.get(from).addOnTop(decks.get(from).draw());
 	        }        
+    	}
+    	if(didYouWin()) {
+			won = true;
     	}
     	setChanged();
         notifyObservers();
@@ -103,14 +109,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     	case 0: 
     		return false; //to main deck
     	case 8: case 9: case 10: case 11: 
-    		if(validMoveToSideDecks(movingTo, selectedCard)) {
-    			if(didYouWin()) {
-    				won = true;
-    			} else {
-    				return true;
-    			}  				
-    		}
-    		return false;
+    		return validMoveToSideDecks(movingTo, selectedCard); 
     	default: return validMoveToTableauDeck(movingTo, selectedCard);
     	}
     }
@@ -168,6 +167,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
      * Resets this solitaire game. Makes a new game.
      */
 	public void reset()	{
+		won = false;
     	decks.clear();
     	movables.clear();
 		setupGame();
