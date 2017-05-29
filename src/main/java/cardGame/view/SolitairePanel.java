@@ -45,15 +45,15 @@ public class SolitairePanel extends JPanel implements Observer {
     }
 
     public int inArea(Point point) { //returns in which area you're in
-    	int columnDeck= (int) point.getX() / (getWidth() / solitaire.getNumOfColumnDecks());
+    	int columnDeck= (int) point.getX() / (getWidth() / solitaire.getNumOfColumns());
     	if(columnDeck == 8) { //area for side decks is 8,9,10,11
     		return 8 + (int) point.getY() / (getHeight() / 4);
     	}
-        return (int) point.getX() / (getWidth() / solitaire.getNumOfColumnDecks());
+        return (int) point.getX() / (getWidth() / solitaire.getNumOfColumns());
     }
 
     private void paintAreas(Graphics g) {
-        int numDecks = solitaire.getNumOfColumnDecks();
+        int numDecks = solitaire.getNumOfColumns();
         g.setColor(Color.YELLOW);
         for(int i = 0; i < numDecks; i++) {
             g.drawRect(i * getWidth() / numDecks, 0, getWidth() / numDecks, getHeight() - 1);
@@ -62,30 +62,33 @@ public class SolitairePanel extends JPanel implements Observer {
             		g.drawRect(i * getWidth() / numDecks, j*getHeight()/4, getWidth() / numDecks, getHeight()/4);
             	}
             }
-        
         }
- 
         g.setColor(Color.BLACK);
     }
 
     private int getSpacing() {
-        return (int) ((getHeight() * 20) / 600.0);
+        if((getHeight() * 1000) / (getWidth() * 600) < 1.0)
+            return (int) ((getHeight() * 20) / 600.0);
+        return (getWidth() * 20)/1000;
     }
 
-    public int getCardSpacing() { 
-    	return BIG_CARD_SPACING; 
-    	}
+    //Assures that a pile of 21 (largest possible size) cards can fit onto the screen
+    public int getCardSpacing() {
+        if(getHeight() < 2 * getSpacing() + 19 * BIG_CARD_SPACING)
+    	    return (getHeight() - 2 * getSpacing())/19;
+        return BIG_CARD_SPACING;
+    }
 
     public int cardWidth() {
-        if((getHeight() * 600.0) / (getWidth() * 436.0) <= 1.0)
+        if((getHeight() * 1000) / (getWidth() * 600) < 1.0)
             return (int) ((cardHeight() * 436.0) / 600.0);
-        return (getWidth() - getSpacing() * 3 - 2 * Card.values().length) / 8;
+        return getWidth()/9 - 2 * getSpacing();
     }
 
     public int cardHeight() {
-        if((getHeight() * 600.0) / (getWidth() * 436.0) > 1.0)
+        if((getHeight() * 1000) / (getWidth() * 600) >= 1.0)
             return (int) ((cardWidth() * 600.0) / 436.0);
-        return (getHeight() - getSpacing() * 2 - 2 * Card.values().length) / 4;
+        return getHeight() / 4 - (getSpacing() * 5)/2;
     }
 
     private void paintDecks(Graphics g) {
@@ -101,7 +104,7 @@ public class SolitairePanel extends JPanel implements Observer {
             for (depth = 0; depth < solitaire.getDeck(deckNum).size(); ++depth) {
                 int posX = getSpacing()  + deckNum * getWidth()/numColumnDecks;
                 
-                int posY = deckNum==0 ? getSpacing()  + SMALL_CARD_SPACING * depth : getSpacing()  + BIG_CARD_SPACING * depth;
+                int posY = deckNum==0 ? getSpacing()  + SMALL_CARD_SPACING * depth : getSpacing()  + getCardSpacing() * depth;
                 g.drawImage(CardBackTextures.getTexture(CardBack.CARD_BACK_BLUE)
                         , posX, posY, cardWidth(), cardHeight(), this);
                 g.drawRect(posX, posY, cardWidth(), cardHeight());
@@ -121,7 +124,7 @@ public class SolitairePanel extends JPanel implements Observer {
                     movableX = getSpacing() + deckNum * getWidth() / numColumnDecks;
                     
                     movableY = deckNum==0 ? getSpacing() + SMALL_CARD_SPACING * solitaire.getDeck(deckNum).size() + SMALL_CARD_SPACING * depth
-                    		: getSpacing() + BIG_CARD_SPACING * solitaire.getDeck(deckNum).size() + BIG_CARD_SPACING * depth;
+                    		: getSpacing() + getCardSpacing() * solitaire.getDeck(deckNum).size() + getCardSpacing() * depth;
                     g.drawImage(CardTextures.getTexture(solitaire.getMovablePile(deckNum).getCardAt(depth))
                             , movableX, movableY, cardWidth(), cardHeight(), this);
                     g.drawRect(movableX, movableY, cardWidth(), cardHeight());
@@ -152,8 +155,7 @@ public class SolitairePanel extends JPanel implements Observer {
                 movablesY.set(deckNum, movableY);
             }
         }
-        
-        
+
         //something is currently moving, so draw it while it moves
         if(currMovable != -1) {
             MovablePile dependency = solitaire.getMovablePile(currMovable);
@@ -167,7 +169,7 @@ public class SolitairePanel extends JPanel implements Observer {
                 else if(currMovable == 0) {
                 	movableY = getSpacing() + SMALL_CARD_SPACING * solitaire.getDeck(currMovable).size() + SMALL_CARD_SPACING * depth;
                 } else {
-                	movableY =  getSpacing() + BIG_CARD_SPACING * solitaire.getDeck(currMovable).size() + BIG_CARD_SPACING * depth;
+                	movableY =  getSpacing() + getCardSpacing() * solitaire.getDeck(currMovable).size() + getCardSpacing() * depth;
                 }
                 
                 
@@ -187,7 +189,7 @@ public class SolitairePanel extends JPanel implements Observer {
                	movableY = getSpacing() + SMALL_CARD_SPACING * solitaire.getDeck(currMovable).size() + SMALL_CARD_SPACING * depth
                         + dependency.getRelativeY();
                } else {
-               	movableY = getSpacing() + BIG_CARD_SPACING * solitaire.getDeck(currMovable).size() + BIG_CARD_SPACING * depth
+               	movableY = getSpacing() + getCardSpacing() * solitaire.getDeck(currMovable).size() + getCardSpacing() * depth
                         + dependency.getRelativeY();
                }
 
@@ -211,5 +213,9 @@ public class SolitairePanel extends JPanel implements Observer {
     @Override
     public void update(Observable observed, Object message) {
         repaint();
+        System.out.println((getHeight() * 1000)/(getWidth() * 600));
+        System.out.println(getWidth() + " " + getHeight());
+        System.out.println(cardWidth() + " " + cardHeight());
+        System.out.println(getCardSpacing());
     }
 }

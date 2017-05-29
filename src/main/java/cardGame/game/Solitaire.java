@@ -81,7 +81,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 
     public int getNumOfTotalDecks() { return decks.size(); }
     
-    public int getNumOfColumnDecks() { return decks.size()-3; }
+    public int getNumOfColumns() { return decks.size()-3; }
 
     public void move(int from, int to, int index) {
     	if(from == 0 && to == 0 && !movables.get(0).isEmpty()) {

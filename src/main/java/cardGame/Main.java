@@ -25,6 +25,7 @@ public class Main {
 		SolitaireDragger sd = new SolitaireDragger(solitaire, panel);
         frame.getContentPane().add(panel);
         frame.setPreferredSize(new Dimension(1000, 600));
+        frame.setMinimumSize(new Dimension(166,150));
         frame.pack();
         frame.setLocationRelativeTo (null); // Center on screen.
         frame.setVisible(true);
