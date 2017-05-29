@@ -23,10 +23,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SolitaireDragger.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SolitaireDragger.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="307">
               <caret line="52" column="76" lean-forward="false" selection-start-line="52" selection-start-column="76" selection-end-line="52" selection-end-column="76" />
               <folding>
                 <marker date="1496066941000" expanded="true" signature="2979:3012" ph="{...}" />
@@ -79,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solitaire.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solitaire.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+            <state relative-caret-position="-1792">
+              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
               <folding>
                 <element signature="e#1658#1659#0" expanded="true" />
                 <element signature="e#1682#1683#0" expanded="true" />
@@ -988,7 +988,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31784000" />
+    <option name="totallyTimeSpent" value="32151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="45" width="1356" height="777" extended-state="0" />
@@ -1465,20 +1465,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="52" column="76" lean-forward="false" selection-start-line="52" selection-start-column="76" selection-end-line="52" selection-end-column="76" />
-          <folding>
-            <marker date="1496066941000" expanded="true" signature="2979:3012" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+        <state relative-caret-position="-1792">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
           <folding>
             <element signature="e#1658#1659#0" expanded="true" />
             <element signature="e#1682#1683#0" expanded="true" />
@@ -1486,6 +1476,16 @@
             <element signature="e#1777#1778#0" expanded="true" />
             <element signature="e#1830#1831#0" expanded="true" />
             <element signature="e#1877#1878#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="52" column="76" lean-forward="false" selection-start-line="52" selection-start-column="76" selection-end-line="52" selection-end-column="76" />
+          <folding>
+            <marker date="1496066941000" expanded="true" signature="2979:3012" ph="{...}" />
           </folding>
         </state>
       </provider>
