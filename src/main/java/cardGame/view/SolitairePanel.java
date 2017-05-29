@@ -19,7 +19,6 @@ public class SolitairePanel extends JPanel implements Observer {
     private Solitaire solitaire;
 
     private List<Integer> movablesX = new ArrayList<>();
-
     private List<Integer> movablesY = new ArrayList<>();
 
     public int getMovableX (int card) { 
