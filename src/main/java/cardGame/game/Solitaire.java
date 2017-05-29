@@ -118,6 +118,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     		return false; //to main deck
     	case 8: case 9: case 10: case 11: 
     		if(validMoveToBuildingPiles(movingTo, selectedCard)) {
+    			System.out.println("valid move indeed");
     			if(didYouWin()) {
     				//do something
     			} else {
@@ -149,10 +150,11 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 		if(movingTo == null && selectedCard.getFace() == Card.Face.ACE) { //is it the first one? 
 			return true;
 		}
-		else if(movingTo == null) return false;
+		if(movingTo == null) return false;
+		
 		int numberOfMovingTo = movingTo.getFace().ordinal();
     	int numberOfSelectedCard = selectedCard.getFace().ordinal();
-	
+    	System.out.println("the one youre moving is " + numberOfMovingTo + " and selected is " + numberOfSelectedCard);
 		if(numberOfMovingTo-1 == numberOfSelectedCard && movingTo.getSuit() == selectedCard.getSuit()) {
 			return true;
 		}	
