@@ -36,9 +36,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
         } else {
         	movable = new MovablePile();
             movable.addObserver(this);
-        }
-       
-        
+        }   
         return movable;
     }
 
@@ -55,15 +53,14 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 
 		for(int i = 8; i < 12; i++) {
 			decks.add(makeEmptyDeck());
-			//getDeck(i).addOnTop(getDeck(0).draw());
 		}
-
 
         /* create them movable on top */
 		for(int i = 0; i < 12; i++) {
 			movables.add(createMovablePile(getDeck(i)));
 		}
 	}
+    
     public Solitaire() {
     	setupGame();
     }
@@ -76,11 +73,17 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
         return movables.get(deckNumber);
     }
 
-    public MovablePile getMovablePile(int deckNumber) { return movables.get(deckNumber); }
+    public MovablePile getMovablePile(int deckNumber) { 
+    	return movables.get(deckNumber); 
+    }
 
-    public int getNumOfTotalDecks() { return decks.size(); }
+    public int getNumOfTotalDecks() { 
+    	return decks.size(); 
+    }
     
-    public int getNumOfColumns() { return decks.size()-3; }
+    public int getNumOfColumns() { 
+    	return decks.size()-3; 
+    }
 
     public void move(int from, int to, int index) {
     	if(from == 0 && to == 0 && !movables.get(0).isEmpty()) {
@@ -88,8 +91,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     		movables.get(0).addOnTop(decks.get(0).draw());
     		setChanged();
 	        notifyObservers();
-    	}
-    	
+    	}  	
     	if(validMove(from, to, index)) 
     	{		
 	        movables.get(to).addOnTop(movables.get(from).splitAt(index));
@@ -110,20 +112,19 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     public boolean validMove(int from, int to, int index) {
     	Card movingTo = movables.get(to).getCard();
     	Card selectedCard = movables.get(from).getCardAt(index);
-    	
-    	
+    	  	
     	switch(to) {
     	case 0: 
     		return false; //to main deck
     	case 8: case 9: case 10: case 11: 
-    		if(validMoveToBuildingPiles(movingTo, selectedCard)) {
-    			System.out.println("valid move indeed");
+    		if(validMoveToSideDecks(movingTo, selectedCard)) {
     			if(didYouWin()) {
     				//do something
     			} else {
     				return true;
     			}  				
     		}
+    		return false;
     	default: return validMoveToTableauDeck(movingTo, selectedCard);
     	}
     }
@@ -144,7 +145,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 	}
 
     @Override
-	public boolean validMoveToBuildingPiles(Card movingTo, Card selectedCard) {
+	public boolean validMoveToSideDecks(Card movingTo, Card selectedCard) {
 		if(movingTo == null && selectedCard.getFace() == Card.Face.ACE) { //is it the first one? 
 			return true;
 		} else if(movingTo == null)
@@ -160,7 +161,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 	public boolean didYouWin() {		
 		for(int i = 8 ; i < 12 ; i++) {
 			Card topCard = movables.get(i).getCard();
-			if(topCard == null || topCard.getFace() != Card.Face.ACE) {
+			if(topCard == null || topCard.getFace() != Card.Face.KING) {
 				return false;
 			}
 		}

@@ -6,7 +6,7 @@ public interface SolitaireRules {
 
 	public boolean validMoveToTableauDeck(Card top, Card current);
 
-	public boolean validMoveToBuildingPiles(Card top, Card current);
+	public boolean validMoveToSideDecks(Card top, Card current);
 	
 	public boolean didYouWin();
 }
