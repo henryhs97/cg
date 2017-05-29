@@ -104,7 +104,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     	case 8: case 9: case 10: case 11: 
     		if(validMoveToSideDecks(movingTo, selectedCard)) {
     			if(didYouWin()) {
-    				//add
+    				winningState();
     			} else {
     				return true;
     			}  				
@@ -114,7 +114,12 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     	}
     }
 
-    /**
+    private void winningState() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/**
      * Returns true if it's a valid move to a tableau deck.
      * A tableau deck is one of the 7 table decks.
      */
