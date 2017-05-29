@@ -163,11 +163,12 @@ public class SolitairePanel extends JPanel implements Observer {
             for (depth = 0; depth < index; ++depth) { //only paint until before the index
             		movableX = getSpacing() + currMovable * getWidth() / numColumnDecks;
                 
-                if(currMovable == 8 || currMovable == 9 || currMovable == 10 || currMovable == 11) {
+                if(currMovable > 7) {
                 	 movableY = getSpacing()  + (currMovable-8)*getHeight()/4;
-                }
-                else if(currMovable == 0) {
+
+                } else if(currMovable == 0) {
                 	movableY = getSpacing() + SMALL_CARD_SPACING * solitaire.getDeck(currMovable).size() + SMALL_CARD_SPACING * depth;
+
                 } else {
                 	movableY =  getSpacing() + getCardSpacing() * solitaire.getDeck(currMovable).size() + getCardSpacing() * depth;
                 }
@@ -177,17 +178,18 @@ public class SolitairePanel extends JPanel implements Observer {
                         , movableX, movableY, cardWidth(), cardHeight(), this);
                 g.drawRect(movableX, movableY, cardWidth(), cardHeight());
             } //after the index you move these
-            for (depth = index; depth < solitaire.getMovablePile(currMovable).size(); ++depth) {
+            for (depth = index; depth < solitaire.getMovablePile(currMovable).size(); depth++) {
                 movableX = currMovable> 7 ? getSpacing() + 8 * getWidth() / numColumnDecks + dependency.getRelativeX()
                 		: getSpacing() + currMovable * getWidth() / numColumnDecks + dependency.getRelativeX();
                 
                 
-               if(currMovable == 8 || currMovable == 9 || currMovable == 10 || currMovable == 11) {
+               if(currMovable > 7) {
                	 movableY = getSpacing()  + (currMovable-8)*getHeight()/4 + dependency.getRelativeY();
-               }
-               else if(currMovable == 0) {
+
+               } else if(currMovable == 0) {
                	movableY = getSpacing() + SMALL_CARD_SPACING * solitaire.getDeck(currMovable).size() + SMALL_CARD_SPACING * depth
                         + dependency.getRelativeY();
+
                } else {
                	movableY = getSpacing() + getCardSpacing() * solitaire.getDeck(currMovable).size() + getCardSpacing() * depth
                         + dependency.getRelativeY();

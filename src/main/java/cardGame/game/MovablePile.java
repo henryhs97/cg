@@ -10,15 +10,14 @@ public class MovablePile extends Movable{
     List<Card> pile = new ArrayList<>();
     private int index;
 
+    public MovablePile(){
+        super();
+    }
+
     public MovablePile(Card card){
         super();
         //if(card != null)
         	pile.add(card);
-    }
-    
-    public MovablePile(List<Card> cards){ //instead add cards 
-        super();
-        pile.addAll(cards);
     }
 
     public Card getCard() {

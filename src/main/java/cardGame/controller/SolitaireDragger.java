@@ -47,10 +47,15 @@ public class SolitaireDragger extends MouseInputAdapter {
                         event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - panel.getCardSpacing() * (cardNum)
                         ) {
                     selectedDeck = deckNum;
-                    index = solitaire.getMovablePile(deckNum).size() - 1 - cardNum;
+                    if(selectedDeck < 8) {
+                        index = solitaire.getMovablePile(deckNum).size() - 1 - cardNum;
+                    }else{
+                        index = solitaire.getMovablePile(deckNum).size() - 1;
+                    }
                     solitaire.getMovablePile(deckNum).setIndex(index);                    
                     startX = event.getX();
                     startY = event.getY();
+                    System.out.println("the selected deck is " + deckNum + " with index " + index + " with size" + solitaire.getMovablePile(deckNum).size());
                     break;
                 }
             }
@@ -66,7 +71,7 @@ public class SolitaireDragger extends MouseInputAdapter {
     public void mouseReleased(MouseEvent event) {
     	if(selectedDeck != -1) {
 			int j = panel.inArea(event.getPoint());
-            if (selectedDeck != j || (j == 0 && selectedDeck == 0))
+            if ((selectedDeck != j || (j == 0 && selectedDeck == 0)))
                 solitaire.move(selectedDeck, j, index);
 
             solitaire.getMovablePile(selectedDeck).setRelativeX(0);
