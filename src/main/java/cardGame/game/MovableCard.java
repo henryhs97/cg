@@ -2,10 +2,6 @@ package cardGame.game;
 
 import cardGame.model.Card;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Observable;
-
 /**
  * Represents a card that may be moved between piles
  */
@@ -18,6 +14,9 @@ public class MovableCard extends Movable {
         this.card = card;
     }
 
+    /**
+     * Returns the movable card
+     */
     public Card getCard(){
         return card;
     }

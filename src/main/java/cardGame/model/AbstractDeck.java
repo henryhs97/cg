@@ -14,7 +14,7 @@ import java.util.Collection;
  */
 abstract public class AbstractDeck implements Emptiable, Sized {
     
-    private static int seed = 2;
+    private static int seed = (int) System.nanoTime()%1000;
     /**
      * To allow slight variation in the way games play out, the seed used
      * is changed every time, but it is seeded to allow reproducible results
@@ -23,15 +23,18 @@ abstract public class AbstractDeck implements Emptiable, Sized {
         return seed++;
     }
     
-    /**
-     * For the purpose of digital shuffling the list-interface, or rather
-     * the Collections function for swapping that requires the list-interface
-     * is essential, as the algorithm used for it is also used in the
-     * shuffle-method.
-     */
     protected List<Card> cards;
     private Random random;
     
+    /**
+     * Create a new deck with no cards
+     */
+    public AbstractDeck() {
+        cards = new ArrayList<>();
+        random = new Random(nextSeed());
+        addCards();
+    }
+      
     /**
      * Returns the list of cards
      */
@@ -48,16 +51,6 @@ abstract public class AbstractDeck implements Emptiable, Sized {
     	removedCards.addAll(cards.subList(0, cards.size()));
     	this.cards.removeAll(removedCards);
         return removedCards;
-    }
-    
-    
-    /**
-     * Create a new deck with no cards
-     */
-    public AbstractDeck() {
-        cards = new ArrayList<>();
-        random = new Random(nextSeed());
-        addCards();
     }
     
     /**
@@ -154,6 +147,10 @@ abstract public class AbstractDeck implements Emptiable, Sized {
         return null;
     }
     
+    /**
+     * Draw a card from the top of the deck. This method will return null 
+     * if the deck is empty,
+     */
     public Card getTopCard() {
         if(!isEmpty())
             return cards.get(cards.size() - 1);

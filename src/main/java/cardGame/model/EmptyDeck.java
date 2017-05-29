@@ -1,9 +1,12 @@
 package cardGame.model;
 
+/**
+ * Represents an empty deck.
+ */
 public class EmptyDeck extends AbstractDeck {
 
     /**
-     * Add all possible cards
+     * Add no cards
      */
     protected void addCards() {  	          
     }

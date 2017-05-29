@@ -11,8 +11,10 @@ import java.awt.event.KeyEvent;
  * for this button.
  */
 public class ResetButton extends JButton {
-    
-    /**
+  
+	private static final long serialVersionUID = 1L;
+
+	/**
      * Initialise the properties of this button
      */
     private void setButtonProperties() {

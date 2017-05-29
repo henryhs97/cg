@@ -9,4 +9,5 @@ public interface SolitaireRules {
 	public boolean validMoveToSideDecks(Card top, Card current);
 	
 	public boolean didYouWin();
+	
 }

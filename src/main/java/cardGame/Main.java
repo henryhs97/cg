@@ -11,8 +11,7 @@ import cardGame.view.SolitairePanel;
 
 
 /**
- * Runs the game. Although technically a controller this class can be found
- * more easily if it's not in that package
+ * Runs the game.
  */
 public class Main {
     public static void main(String[] args) {

@@ -153,7 +153,7 @@ public enum Card {
     }
     
     /**
-     * Get the suit of this card (which might be null if getFace() is JOKER)
+     * Get the suit of this card
      */
     public Suit getSuit() {
         return suit;

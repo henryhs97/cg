@@ -55,7 +55,6 @@ public class SolitaireDragger extends MouseInputAdapter {
                     solitaire.getMovablePile(deckNum).setIndex(index);                    
                     startX = event.getX();
                     startY = event.getY();
-                    System.out.println("the selected deck is " + deckNum + " with index " + index + " with size" + solitaire.getMovablePile(deckNum).size());
                     break;
                 }
             }
@@ -64,26 +63,24 @@ public class SolitaireDragger extends MouseInputAdapter {
     }
 
     /**
-     * When the top card is released with the mouse in the discard square,
-     * the card is moved.
+     * If a deck has been selected (not -1) the pile is moved appropriately.
+     * selectedDeck becomes false afterwards (-1)
      */
     @Override
     public void mouseReleased(MouseEvent event) {
     	if(selectedDeck != -1) {
-			int j = panel.inArea(event.getPoint());
-            if ((selectedDeck != j || (j == 0 && selectedDeck == 0)))
-                solitaire.move(selectedDeck, j, index);
+			int toWhichDeck = panel.inArea(event.getPoint());
+            if ((selectedDeck != toWhichDeck || (toWhichDeck == 0 && selectedDeck == 0)))
+                solitaire.move(selectedDeck, toWhichDeck, index);
 
             solitaire.getMovablePile(selectedDeck).setRelativeX(0);
             solitaire.getMovablePile(selectedDeck).setRelativeY(0);
-
     	}
         selectedDeck = -1;
     }
 
     /**
-     * If a card is selected it is moved relative to the positions the mouse
-     * was first pressed.
+     * If a pile is selected it is moved relative to the positions the mouse was first pressed.
      */
     @Override
     public void mouseDragged(MouseEvent event) {
@@ -92,5 +89,5 @@ public class SolitaireDragger extends MouseInputAdapter {
                 solitaire.getMovablePile(selectedDeck).setRelativeY(event.getY() - startY);
             }
     }
-
+    
 }
