@@ -223,7 +223,10 @@ public class SolitairePanel extends JPanel implements Observer {
         paintSideDeckAreas(g);
         paintDecks(g);
         if(solitaire.getWinState()) {
-        	//
+            g.setColor(new Color(255, 255, 255));
+            g.fillRect(getWidth()/2 - 20,getHeight()/2, 65, 20);
+            g.setColor(new Color(0,0,0));
+        	g.drawString("YOU WIN!",getWidth()/2 - 18,getHeight()/2 + 13);
         }
     }
 
