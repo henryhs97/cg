@@ -219,14 +219,15 @@ public class SolitairePanel extends JPanel implements Observer {
 
     @Override
     public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        paintSideDeckAreas(g);
-        paintDecks(g);
         if(solitaire.getWinState()) {
             g.setColor(new Color(255, 255, 255));
             g.fillRect(getWidth()/2 - 20,getHeight()/2, 65, 20);
             g.setColor(new Color(0,0,0));
         	g.drawString("YOU WIN!",getWidth()/2 - 18,getHeight()/2 + 13);
+        }else{
+            super.paintComponent(g);
+            paintSideDeckAreas(g);
+            paintDecks(g);
         }
     }
 
