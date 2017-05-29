@@ -4,7 +4,6 @@ import cardGame.model.AbstractDeck;
 import cardGame.model.Card;
 import cardGame.model.CompleteDeck;
 import cardGame.model.EmptyDeck;
-import cardGame.model.Card.Face;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,30 +42,30 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
         return movable;
     }
 
-    public Solitaire() {
-    	 decks.add(makeCompleteDeck());    	
-    	 
+    private void setupGame() {
+		decks.add(makeCompleteDeck());
+
     	 /* makes 7 decks on table */
-        for(int i = 1; i < 8; i++) {     
-        	decks.add(makeEmptyDeck());  
-        	for(int j = 0; j < i; j++) {
-        		getDeck(i).addOnTop(getDeck(0).draw());
-        	}
-        }
-        
-        for(int i = 8; i < 12; i++) {     
-        	decks.add(makeEmptyDeck());  
-        	//getDeck(i).addOnTop(getDeck(0).draw());
-        }
-        
+		for(int i = 1; i < 8; i++) {
+			decks.add(makeEmptyDeck());
+			for(int j = 0; j < i; j++) {
+				getDeck(i).addOnTop(getDeck(0).draw());
+			}
+		}
+
+		for(int i = 8; i < 12; i++) {
+			decks.add(makeEmptyDeck());
+			//getDeck(i).addOnTop(getDeck(0).draw());
+		}
+
 
         /* create them movable on top */
-        for(int i = 0; i < 12; i++) {
-            movables.add(createMovablePile(getDeck(i)));
-        }
-        
-        
-    
+		for(int i = 0; i < 12; i++) {
+			movables.add(createMovablePile(getDeck(i)));
+		}
+	}
+    public Solitaire() {
+    	setupGame();
     }
 
     public AbstractDeck getDeck(int deckNumber) {
@@ -81,7 +80,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 
     public int getNumOfTotalDecks() { return decks.size(); }
     
-    public int getNumOfColumnDecks() { return decks.size()-3; }
+    public int getNumOfColumns() { return decks.size()-3; }
 
     public void move(int from, int to, int index) {
     	if(from == 0 && to == 0 && !movables.get(0).isEmpty()) {
@@ -125,7 +124,6 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     				return true;
     			}  				
     		}
-    		
     	default: return validMoveToTableauDeck(movingTo, selectedCard);
     	}
     }
@@ -145,33 +143,36 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 		return false;
 	}
 
-	@Override
+    @Override
 	public boolean validMoveToBuildingPiles(Card movingTo, Card selectedCard) {
 		if(movingTo == null && selectedCard.getFace() == Card.Face.ACE) { //is it the first one? 
 			return true;
-		}
-		if(movingTo == null) return false;
-		
-		int numberOfMovingTo = movingTo.getFace().ordinal();
-    	int numberOfSelectedCard = selectedCard.getFace().ordinal();
-    	System.out.println("the one youre moving is " + numberOfMovingTo + " and selected is " + numberOfSelectedCard);
-		if(numberOfMovingTo-1 == numberOfSelectedCard && movingTo.getSuit() == selectedCard.getSuit()) {
+		} else if(movingTo == null)
+			return false;
+	
+		if(selectedCard.compareTo(movingTo) == 1 && movingTo.getSuit() == selectedCard.getSuit()) {
 			return true;
 		}	
 		return false;
 	}
 
 	@Override
-	public boolean didYouWin() {
-		
+	public boolean didYouWin() {		
 		for(int i = 8 ; i < 12 ; i++) {
-			Card topCard = decks.get(i).getTopCard();
-			if(topCard == null || topCard.getFace() != Card.Face.KING) {
+			Card topCard = movables.get(i).getCard();
+			if(topCard == null || topCard.getFace() != Card.Face.ACE) {
 				return false;
 			}
 		}
 		return true;	
 	}
 
+	public void reset()	{
+    	decks.clear();
+    	movables.clear();
+		setupGame();
 
+		setChanged();
+		notifyObservers();
+	}
 }
