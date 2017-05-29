@@ -156,7 +156,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 	public boolean didYouWin() {		
 		for(int i = 8 ; i < 12 ; i++) {
 			Card topCard = movables.get(i).getTopCard();
-			if(topCard == null || topCard.getFace() != Card.Face.ACE) {
+			if(topCard == null || topCard.getFace() != Card.Face.KING) {
 				return false;
 			}
 		}
