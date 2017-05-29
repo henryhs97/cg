@@ -161,7 +161,10 @@ public class SolitairePanel extends JPanel implements Observer {
             MovablePile dependency = solitaire.getMovablePile(currMovable);
             int index = solitaire.getMovablePile(currMovable).getIndex(); //start moving from where?
             for (depth = 0; depth < index; ++depth) { //only paint until before the index
-            		movableX = getSpacing() + currMovable * getWidth() / numColumnDecks;
+            	if(currMovable>8)
+            		movableX = getSpacing() + 8 * getWidth() / numColumnDecks;
+            	
+            	else movableX = getSpacing() + currMovable * getWidth() / numColumnDecks;
                 
                 if(currMovable > 7) {
                 	 movableY = getSpacing()  + (currMovable-8)*getHeight()/4;
