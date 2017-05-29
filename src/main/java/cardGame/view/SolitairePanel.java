@@ -146,7 +146,7 @@ public class SolitairePanel extends JPanel implements Observer {
                     
                     g.drawImage(CardTextures.getTexture(solitaire.getMovablePile(deckNum).getCardAt(depth))
                             , movableX, movableY, cardWidth(), cardHeight(), this);
-                    g.drawRect(movableX, movableY, cardWidth(), cardHeight());
+                    g.drawRect(posX, movableY, cardWidth(), cardHeight());
                 }
                 movablesX.set(deckNum, movableX);
                 movablesY.set(deckNum, movableY);

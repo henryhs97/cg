@@ -43,30 +43,30 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
         return movable;
     }
 
-    public Solitaire() {
-    	 decks.add(makeCompleteDeck());    	
-    	 
+    private void setupGame() {
+		decks.add(makeCompleteDeck());
+
     	 /* makes 7 decks on table */
-        for(int i = 1; i < 8; i++) {     
-        	decks.add(makeEmptyDeck());  
-        	for(int j = 0; j < i; j++) {
-        		getDeck(i).addOnTop(getDeck(0).draw());
-        	}
-        }
-        
-        for(int i = 8; i < 12; i++) {     
-        	decks.add(makeEmptyDeck());  
-        	//getDeck(i).addOnTop(getDeck(0).draw());
-        }
-        
+		for(int i = 1; i < 8; i++) {
+			decks.add(makeEmptyDeck());
+			for(int j = 0; j < i; j++) {
+				getDeck(i).addOnTop(getDeck(0).draw());
+			}
+		}
+
+		for(int i = 8; i < 12; i++) {
+			decks.add(makeEmptyDeck());
+			//getDeck(i).addOnTop(getDeck(0).draw());
+		}
+
 
         /* create them movable on top */
-        for(int i = 0; i < 12; i++) {
-            movables.add(createMovablePile(getDeck(i)));
-        }
-        
-        
-    
+		for(int i = 0; i < 12; i++) {
+			movables.add(createMovablePile(getDeck(i)));
+		}
+	}
+    public Solitaire() {
+    	setupGame();
     }
 
     public AbstractDeck getDeck(int deckNumber) {
@@ -168,5 +168,12 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 		return true;	
 	}
 
+	public void reset()	{
+    	decks.clear();
+    	movables.clear();
+		setupGame();
 
+		setChanged();
+		notifyObservers();
+	}
 }
