@@ -222,6 +222,9 @@ public class SolitairePanel extends JPanel implements Observer {
         super.paintComponent(g);
         paintSideDeckAreas(g);
         paintDecks(g);
+        if(solitaire.getWinState()) {
+        	//
+        }
     }
 
     @Override

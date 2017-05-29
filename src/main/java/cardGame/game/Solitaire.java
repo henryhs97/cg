@@ -13,6 +13,7 @@ import java.util.Observer;
 
 public class Solitaire extends Observable implements Observer, SolitaireRules{
 
+	private boolean won = false;
     private List<AbstractDeck> decks = new ArrayList<>();
     private List<MovablePile> movables = new ArrayList<>();
     
@@ -55,7 +56,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     /**
      * Sets up decks and movable piles for a solitaire game.
      */
-    private void setupGame() {
+    public void setupGame() {
 		decks.add(makeCompleteDeck());
     	 /* makes 7 decks on table */
 		for(int i = 1; i < 8; i++) {
@@ -104,7 +105,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     	case 8: case 9: case 10: case 11: 
     		if(validMoveToSideDecks(movingTo, selectedCard)) {
     			if(didYouWin()) {
-    				winningState();
+    				won = true;
     			} else {
     				return true;
     			}  				
@@ -113,12 +114,11 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     	default: return validMoveToTableauDeck(movingTo, selectedCard);
     	}
     }
-
-    private void winningState() {
-		// TODO Auto-generated method stub
-		
-	}
-
+    
+    public boolean getWinState() {
+    	return won;
+    }
+   
 	/**
      * Returns true if it's a valid move to a tableau deck.
      * A tableau deck is one of the 7 table decks.
