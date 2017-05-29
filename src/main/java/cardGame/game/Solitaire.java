@@ -153,7 +153,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 		int numberOfMovingTo = movingTo.getFace().ordinal();
     	int numberOfSelectedCard = selectedCard.getFace().ordinal();
 	
-		if(numberOfMovingTo-1 == numberOfSelectedCard && movingTo.getSuit() == selectedCard.getSuit()) {
+		if(numberOfMovingTo+1 == numberOfSelectedCard && movingTo.getSuit() == selectedCard.getSuit()) {
 			return true;
 		}	
 		return false;
