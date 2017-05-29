@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f662ae0-1355-4609-91e7-676034d4bc89" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/controller/SolitaireDragger.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/controller/SolitaireDragger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/game/Solitaire.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/game/Solitaire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/view/SolitairePanel.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/view/SolitairePanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,9 +23,12 @@
       <file leaf-file-name="SolitairePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="21">
+              <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+              <folding>
+                <element signature="e#2096#2097#0" expanded="true" />
+                <element signature="e#2153#2154#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,22 +36,40 @@
       <file leaf-file-name="SolitaireDragger.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="50" column="74" lean-forward="false" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
+            <state relative-caret-position="172">
+              <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
               <folding>
-                <marker date="1496051032000" expanded="true" signature="2977:3011" ph="{...}" />
-                <marker date="1496051032000" expanded="true" signature="3017:3131" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="3193:3476" ph="{...}" />
+                <marker date="1496053205000" expanded="true" signature="2720:2753" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solitaire.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ResetButton.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solitaire.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="155" column="28" lean-forward="false" selection-start-line="155" selection-start-column="28" selection-end-line="155" selection-end-column="28" />
+            <state relative-caret-position="638">
+              <caret line="162" column="53" lean-forward="true" selection-start-line="162" selection-start-column="53" selection-end-line="162" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/Card.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-12">
+              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -64,45 +90,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="750">
               <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-              <folding>
-                <marker date="1496051032000" expanded="true" signature="404:566" ph="/**...*/" />
-                <marker date="1496051032000" expanded="false" signature="600:611" ph=" { " />
-                <marker date="1496051032000" expanded="false" signature="625:631" ph=" }" />
-                <marker date="1496051032000" expanded="true" signature="641:897" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="966:1010" ph="/**...*/" />
-                <marker date="1496051032000" expanded="false" signature="1042:1053" ph=" { " />
-                <marker date="1496051032000" expanded="false" signature="1066:1072" ph=" }" />
-                <marker date="1496051032000" expanded="true" signature="1082:1211" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="1255:1448" ph="{...}" />
-                <marker date="1496051032000" expanded="true" signature="1463:1513" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="1540:1643" ph="{...}" />
-                <marker date="1496051032000" expanded="true" signature="1653:1726" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="1751:1795" ph="{...}" />
-                <marker date="1496051032000" expanded="true" signature="1805:1863" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="1913:1984" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="2021:2094" ph="{...}" />
-                <marker date="1496051032000" expanded="true" signature="2104:2246" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="2286:2359" ph="{...}" />
-                <marker date="1496051032000" expanded="true" signature="2369:2420" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="2460:2551" ph="{...}" />
-                <marker date="1496051032000" expanded="true" signature="2561:2706" ph="/**...*/" />
-                <marker date="1496051032000" expanded="false" signature="2752:2763" ph=" { " />
-                <marker date="1496051032000" expanded="false" signature="2782:2788" ph=" }" />
-                <marker date="1496051032000" expanded="true" signature="2798:2946" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="2973:3183" ph="{...}" />
-                <marker date="1496051032000" expanded="true" signature="3193:3250" ph="/**...*/" />
-                <marker date="1496051032000" expanded="false" signature="3286:3297" ph=" { " />
-                <marker date="1496051032000" expanded="false" signature="3317:3323" ph=" }" />
-                <marker date="1496051032000" expanded="true" signature="3333:3399" ph="/**...*/" />
-                <marker date="1496051032000" expanded="false" signature="3442:3453" ph=" { " />
-                <marker date="1496051032000" expanded="false" signature="3476:3482" ph=" }" />
-                <marker date="1496051032000" expanded="true" signature="3492:3565" ph="/**...*/" />
-                <marker date="1496051032000" expanded="false" signature="3603:3614" ph=" { " />
-                <marker date="1496051032000" expanded="false" signature="3628:3634" ph=" }" />
-                <marker date="1496051032000" expanded="true" signature="3644:3747" ph="/**...*/" />
-                <marker date="1496051032000" expanded="true" signature="3771:3873" ph="{...}" />
-                <marker date="1496051032000" expanded="true" signature="3908:4007" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,11 +98,12 @@
       <file leaf-file-name="MovablePile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="96">
               <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1640#1641#0" expanded="false" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,7 +112,7 @@
       <file leaf-file-name="Movable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Movable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="280">
               <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -135,7 +124,7 @@
       <file leaf-file-name="MovableCard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="270">
               <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="e#373#374#0" expanded="true" />
@@ -180,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java" />
       </list>
     </option>
   </component>
@@ -212,8 +202,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -442,8 +430,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cardGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artifacts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -958,12 +966,13 @@
       <workItem from="1495738048169" duration="64000" />
       <workItem from="1495739468394" duration="710000" />
       <workItem from="1495782015600" duration="17867000" />
-      <workItem from="1496051075985" duration="404000" />
+      <workItem from="1496051075985" duration="493000" />
+      <workItem from="1496051855845" duration="2692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22019000" />
+    <option name="totallyTimeSpent" value="24800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="42" width="1324" height="780" extended-state="0" />
@@ -1029,9 +1038,7 @@
         <state relative-caret-position="945">
           <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
           <folding>
-            <marker date="1496051032000" expanded="true" signature="2977:3011" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3017:3131" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="3193:3476" ph="{...}" />
+            <marker date="1496053205000" expanded="true" signature="2720:2753" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1066,7 +1073,8 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="false" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1075,45 +1083,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <marker date="1496051032000" expanded="true" signature="404:566" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="600:611" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="625:631" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="641:897" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="966:1010" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="1042:1053" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="1066:1072" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="1082:1211" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1255:1448" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1463:1513" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1540:1643" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1653:1726" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1751:1795" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1805:1863" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1913:1984" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2021:2094" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2104:2246" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2286:2359" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2369:2420" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2460:2551" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2561:2706" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="2752:2763" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="2782:2788" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="2798:2946" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2973:3183" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3193:3250" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3286:3297" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3317:3323" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3333:3399" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3442:3453" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3476:3482" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3492:3565" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3603:3614" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3628:3634" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3644:3747" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="3771:3873" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3908:4007" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,7 +1102,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="111" column="88" lean-forward="false" selection-start-line="111" selection-start-column="88" selection-end-line="111" selection-end-column="88" />
-          <folding />
+          <folding>
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1151,9 +1124,7 @@
         <state relative-caret-position="945">
           <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
           <folding>
-            <marker date="1496051032000" expanded="true" signature="2977:3011" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3017:3131" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="3193:3476" ph="{...}" />
+            <marker date="1496053205000" expanded="true" signature="2720:2753" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1162,45 +1133,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <marker date="1496051032000" expanded="true" signature="404:566" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="600:611" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="625:631" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="641:897" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="966:1010" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="1042:1053" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="1066:1072" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="1082:1211" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1255:1448" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1463:1513" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1540:1643" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1653:1726" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1751:1795" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1805:1863" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1913:1984" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2021:2094" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2104:2246" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2286:2359" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2369:2420" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2460:2551" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2561:2706" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="2752:2763" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="2782:2788" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="2798:2946" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2973:3183" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3193:3250" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3286:3297" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3317:3323" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3333:3399" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3442:3453" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3476:3482" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3492:3565" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3603:3614" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3628:3634" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3644:3747" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="3771:3873" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3908:4007" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1221,7 +1154,8 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="false" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1239,7 +1173,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="111" column="88" lean-forward="false" selection-start-line="111" selection-start-column="88" selection-end-line="111" selection-end-column="88" />
-          <folding />
+          <folding>
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1258,9 +1195,7 @@
         <state relative-caret-position="945">
           <caret line="67" column="56" lean-forward="true" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
           <folding>
-            <marker date="1496051032000" expanded="true" signature="2977:3011" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3017:3131" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="3193:3476" ph="{...}" />
+            <marker date="1496053205000" expanded="true" signature="2720:2753" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1269,45 +1204,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <marker date="1496051032000" expanded="true" signature="404:566" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="600:611" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="625:631" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="641:897" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="966:1010" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="1042:1053" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="1066:1072" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="1082:1211" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1255:1448" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1463:1513" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1540:1643" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1653:1726" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1751:1795" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1805:1863" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1913:1984" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2021:2094" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2104:2246" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2286:2359" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2369:2420" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2460:2551" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2561:2706" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="2752:2763" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="2782:2788" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="2798:2946" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2973:3183" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3193:3250" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3286:3297" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3317:3323" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3333:3399" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3442:3453" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3476:3482" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3492:3565" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3603:3614" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3628:3634" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3644:3747" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="3771:3873" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3908:4007" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1328,7 +1225,8 @@
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="false" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1352,7 +1250,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/DrawAction.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/DrawButton.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ResetAction.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/CardDragger.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Draw.java" />
@@ -1381,67 +1278,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/DrawPanel.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/AbstractDeck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-          <folding>
-            <marker date="1496051032000" expanded="true" signature="404:566" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="600:611" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="625:631" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="641:897" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="966:1010" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="1042:1053" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="1066:1072" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="1082:1211" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1255:1448" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1463:1513" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1540:1643" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1653:1726" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1751:1795" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="1805:1863" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="1913:1984" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2021:2094" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2104:2246" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2286:2359" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2369:2420" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2460:2551" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="2561:2706" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="2752:2763" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="2782:2788" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="2798:2946" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="2973:3183" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3193:3250" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3286:3297" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3317:3323" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3333:3399" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3442:3453" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3476:3482" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3492:3565" ph="/**...*/" />
-            <marker date="1496051032000" expanded="false" signature="3603:3614" ph=" { " />
-            <marker date="1496051032000" expanded="false" signature="3628:3634" ph=" }" />
-            <marker date="1496051032000" expanded="true" signature="3644:3747" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="3771:3873" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3908:4007" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Movable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1455,9 +1296,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/DoubleDeck.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/DiscardPile.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Movable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="270">
           <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
             <element signature="e#373#374#0" expanded="true" />
@@ -1468,39 +1327,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="96">
           <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="50" column="74" lean-forward="false" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
-          <folding>
-            <marker date="1496051032000" expanded="true" signature="2977:3011" ph="{...}" />
-            <marker date="1496051032000" expanded="true" signature="3017:3131" ph="/**...*/" />
-            <marker date="1496051032000" expanded="true" signature="3193:3476" ph="{...}" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="21">
+          <caret line="71" column="32" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+          <folding>
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="155" column="28" lean-forward="false" selection-start-line="155" selection-start-column="28" selection-end-line="155" selection-end-column="28" />
+        <state relative-caret-position="638">
+          <caret line="162" column="53" lean-forward="true" selection-start-line="162" selection-start-column="53" selection-end-line="162" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+          <folding>
+            <marker date="1496053205000" expanded="true" signature="2720:2753" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>

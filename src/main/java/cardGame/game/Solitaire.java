@@ -124,7 +124,6 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     				return true;
     			}  				
     		}
-    		
     	default: return validMoveToTableauDeck(movingTo, selectedCard);
     	}
     }
@@ -148,12 +147,10 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 	public boolean validMoveToBuildingPiles(Card movingTo, Card selectedCard) {
 		if(movingTo == null && selectedCard.getFace() == Card.Face.ACE) { //is it the first one? 
 			return true;
-		}
-		else if(movingTo == null) return false;
-		int numberOfMovingTo = movingTo.getFace().ordinal();
-    	int numberOfSelectedCard = selectedCard.getFace().ordinal();
+		} else if(movingTo == null)
+			return false;
 	
-		if(numberOfMovingTo+1 == numberOfSelectedCard && movingTo.getSuit() == selectedCard.getSuit()) {
+		if(selectedCard.compareTo(movingTo) == 1 && movingTo.getSuit() == selectedCard.getSuit()) {
 			return true;
 		}	
 		return false;

@@ -41,7 +41,7 @@ public class SolitaireDragger extends MouseInputAdapter {
     	int deckNum= panel.inArea(event.getPoint());
 	    if(solitaire.getMovablePile(deckNum) != null) {
             for(int cardNum = 0; cardNum < solitaire.getMovablePile(deckNum).size(); cardNum++) {
-                if (event.getX() > panel.getMovableX(deckNum) &&
+                if (    event.getX() > panel.getMovableX(deckNum) &&
                         event.getX() < panel.getMovableX(deckNum) + panel.cardWidth() &&
                         event.getY() > panel.getMovableY(deckNum) - panel.getCardSpacing() * (cardNum) &&
                         event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - panel.getCardSpacing() * (cardNum)
@@ -62,25 +62,18 @@ public class SolitaireDragger extends MouseInputAdapter {
     /**
      * When the top card is released with the mouse in the discard square,
      * the card is moved.
-     *
-     * TODO: detect action
-     * TODO: fire action
      */
     @Override
     public void mouseReleased(MouseEvent event) {
-    	if(selectedDeck!= -1) {
+    	if(selectedDeck != -1) {
 			int j = panel.inArea(event.getPoint());
-				if (selectedDeck != j || (j==0 && selectedDeck==0)){
-					solitaire.move(selectedDeck, j, index);
-                    solitaire.getMovablePile(selectedDeck).setRelativeX(0);
-                    solitaire.getMovablePile(selectedDeck).setRelativeY(0);
-	            } else {
-	                solitaire.getMovablePile(selectedDeck).setRelativeX(0);
-	                solitaire.getMovablePile(selectedDeck).setRelativeY(0);       
-	            }
-		            
+            if (selectedDeck != j || (j == 0 && selectedDeck == 0))
+                solitaire.move(selectedDeck, j, index);
+
+            solitaire.getMovablePile(selectedDeck).setRelativeX(0);
+            solitaire.getMovablePile(selectedDeck).setRelativeY(0);
+
     	}
-    		
         selectedDeck = -1;
     }
 
