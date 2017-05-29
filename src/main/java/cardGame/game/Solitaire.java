@@ -30,12 +30,12 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     }
 
     private MovablePile createMovablePile(AbstractDeck deck) {
-        MovablePile movable = null;
+        MovablePile movable;
         if(!deck.isEmpty()) {
             movable = new MovablePile(deck.draw());
             movable.addObserver(this);
         } else {
-        	movable = new MovablePile(deck.draw());
+        	movable = new MovablePile();
             movable.addObserver(this);
         }
        
@@ -129,7 +129,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     }
 
     public boolean validMoveToTableauDeck(Card movingTo, Card selectedCard) {   
-    	if(movingTo != null) {
+    	if(movingTo != null && selectedCard != null) {
 	    	int numberOfMovingTo = movingTo.getFace().ordinal();
 	    	int numberOfSelectedCard = selectedCard.getFace().ordinal();
 			if(numberOfMovingTo-1 == numberOfSelectedCard
