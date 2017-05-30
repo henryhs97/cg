@@ -2,10 +2,158 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f662ae0-1355-4609-91e7-676034d4bc89" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cardGame/game/MovableCard.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/ACE_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/ACE_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/ACE_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/ACE_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/ACE_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/ACE_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/ACE_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/ACE_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/BLACK_JOKER.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/BLACK_JOKER.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/CARD_BACK_BLUE.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/CARD_BACK_BLUE.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/CARD_BACK_RED.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/CARD_BACK_RED.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/EIGHT_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/EIGHT_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/EIGHT_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/EIGHT_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/EIGHT_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/EIGHT_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/EIGHT_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/EIGHT_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/FIVE_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/FIVE_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/FIVE_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/FIVE_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/FIVE_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/FIVE_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/FIVE_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/FIVE_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/FOUR_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/FOUR_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/FOUR_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/FOUR_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/FOUR_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/FOUR_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/FOUR_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/FOUR_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/JACK_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/JACK_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/JACK_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/JACK_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/JACK_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/JACK_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/JACK_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/JACK_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/KING_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/KING_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/KING_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/KING_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/KING_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/KING_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/KING_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/KING_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/NINE_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/NINE_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/NINE_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/NINE_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/NINE_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/NINE_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/NINE_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/NINE_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/QUEEN_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/QUEEN_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/QUEEN_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/QUEEN_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/QUEEN_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/QUEEN_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/QUEEN_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/QUEEN_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/RED_JOKER.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/RED_JOKER.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/SEVEN_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/SEVEN_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/SEVEN_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/SEVEN_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/SEVEN_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/SEVEN_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/SEVEN_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/SEVEN_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/SIX_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/SIX_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/SIX_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/SIX_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/SIX_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/SIX_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/SIX_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/SIX_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/TEN_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/TEN_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/TEN_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/TEN_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/TEN_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/TEN_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/TEN_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/TEN_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/THREE_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/THREE_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/THREE_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/THREE_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/THREE_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/THREE_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/THREE_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/THREE_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/TWO_CLUBS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/TWO_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/TWO_DIAMONDS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/TWO_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/TWO_HEARTS.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/TWO_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/TWO_SPADES.png" afterPath="$PROJECT_DIR$/src/main/resources/textures/TWO_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/Main.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/controller/SolitaireDragger.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/controller/SolitaireDragger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/game/Movable.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/game/Movable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/game/MovablePile.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/game/MovablePile.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/game/Solitaire.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/game/Solitaire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/model/AbstractDeck.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/model/AbstractDeck.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/model/Card$Colour.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/model/Card$Colour.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/model/Card$Face.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/model/Card$Face.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/model/Card$Suit.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/model/Card$Suit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/model/Card.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/model/Card.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/model/CompleteDeck.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/model/CompleteDeck.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/util/Emptiable.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/util/Emptiable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/view/CardTextures.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/view/CardTextures.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cardGame/view/SolitairePanel.class" afterPath="$PROJECT_DIR$/target/classes/cardGame/view/SolitairePanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/ACE_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/ACE_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/ACE_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/ACE_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/ACE_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/ACE_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/ACE_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/ACE_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/BLACK_JOKER.png" afterPath="$PROJECT_DIR$/target/classes/textures/BLACK_JOKER.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/CARD_BACK_BLUE.png" afterPath="$PROJECT_DIR$/target/classes/textures/CARD_BACK_BLUE.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/CARD_BACK_RED.png" afterPath="$PROJECT_DIR$/target/classes/textures/CARD_BACK_RED.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/EIGHT_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/EIGHT_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/EIGHT_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/EIGHT_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/EIGHT_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/EIGHT_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/EIGHT_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/EIGHT_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/FIVE_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/FIVE_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/FIVE_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/FIVE_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/FIVE_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/FIVE_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/FIVE_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/FIVE_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/FOUR_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/FOUR_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/FOUR_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/FOUR_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/FOUR_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/FOUR_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/FOUR_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/FOUR_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/JACK_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/JACK_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/JACK_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/JACK_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/JACK_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/JACK_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/JACK_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/JACK_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/KING_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/KING_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/KING_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/KING_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/KING_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/KING_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/KING_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/KING_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/NINE_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/NINE_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/NINE_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/NINE_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/NINE_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/NINE_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/NINE_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/NINE_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/QUEEN_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/QUEEN_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/QUEEN_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/QUEEN_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/QUEEN_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/QUEEN_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/QUEEN_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/QUEEN_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/RED_JOKER.png" afterPath="$PROJECT_DIR$/target/classes/textures/RED_JOKER.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/SEVEN_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/SEVEN_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/SEVEN_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/SEVEN_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/SEVEN_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/SEVEN_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/SEVEN_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/SEVEN_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/SIX_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/SIX_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/SIX_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/SIX_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/SIX_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/SIX_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/SIX_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/SIX_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/TEN_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/TEN_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/TEN_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/TEN_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/TEN_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/TEN_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/TEN_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/TEN_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/THREE_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/THREE_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/THREE_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/THREE_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/THREE_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/THREE_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/THREE_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/THREE_SPADES.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/TWO_CLUBS.png" afterPath="$PROJECT_DIR$/target/classes/textures/TWO_CLUBS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/TWO_DIAMONDS.png" afterPath="$PROJECT_DIR$/target/classes/textures/TWO_DIAMONDS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/TWO_HEARTS.png" afterPath="$PROJECT_DIR$/target/classes/textures/TWO_HEARTS.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/TWO_SPADES.png" afterPath="$PROJECT_DIR$/target/classes/textures/TWO_SPADES.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/Main.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/controller/ButtonBar.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/controller/ButtonBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/controller/ResetAction.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/controller/ResetAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/game/Movable.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/game/Movable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/game/SolitaireRules.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/game/SolitaireRules.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/model/AbstractDeck.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/model/AbstractDeck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/model/Card.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/model/Card.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/model/CompleteDeck.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/model/CompleteDeck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/model/EmptyDeck.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/model/EmptyDeck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/util/Emptiable.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/util/Emptiable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/util/Sized.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/util/Sized.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/view/CardBack.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/view/CardBack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/view/CardBackTextures.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/view/CardBackTextures.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/view/CardTextures.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/view/CardTextures.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java" afterPath="$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/textures/about.txt" afterPath="$PROJECT_DIR$/src/main/resources/textures/about.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/textures/about.txt" afterPath="$PROJECT_DIR$/target/classes/textures/about.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,89 +169,11 @@
       <file leaf-file-name="SolitairePanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="229" column="26" lean-forward="false" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
+            <state relative-caret-position="-1158">
+              <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
               <folding>
-                <element signature="e#9931#9932#0" expanded="true" />
-                <element signature="e#9956#9957#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SolitaireDragger.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-              <folding>
-                <marker date="1496085121000" expanded="true" signature="179:186" ph="/**...*/" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardTextures.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/CardTextures.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovablePile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Solitaire.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="111" column="24" lean-forward="false" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
-              <folding>
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#3304#3305#0" expanded="true" />
-                <element signature="e#3327#3328#0" expanded="true" />
-                <marker date="1496088820000" expanded="false" signature="4962:4973" ph=" { " />
-                <marker date="1496088820000" expanded="false" signature="5002:5008" ph=" }" />
-                <marker date="1496088820000" expanded="false" signature="5127:5136" ph=" { " />
-                <marker date="1496088820000" expanded="false" signature="5168:5175" ph=" }" />
-                <marker date="1496088820000" expanded="false" signature="5280:5289" ph=" { " />
-                <marker date="1496088820000" expanded="false" signature="5309:5316" ph=" }" />
-                <marker date="1496088820000" expanded="false" signature="5558:5567" ph=" { " />
-                <marker date="1496088820000" expanded="false" signature="5589:5596" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovableCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding>
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#367#368#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
+                <element signature="e#709#710#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,8 +182,101 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+            <state relative-caret-position="210">
+              <caret line="21" column="61" lean-forward="false" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SolitaireDragger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
+              <folding>
+                <marker date="1496168818000" expanded="true" signature="179:186" ph="/**...*/" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solitaire.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1425">
+              <caret line="105" column="34" lean-forward="false" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResetButton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ButtonBar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ButtonBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractDeck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/AbstractDeck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/Card.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              <folding>
+                <element signature="e#3657#3658#0" expanded="false" />
+                <element signature="e#3701#3702#0" expanded="false" />
+                <element signature="e#3810#3811#0" expanded="false" />
+                <element signature="e#3847#3848#0" expanded="false" />
+                <element signature="e#4460#4461#0" expanded="false" />
+                <element signature="e#4487#4488#0" expanded="false" />
+                <element signature="e#4569#4570#0" expanded="false" />
+                <element signature="e#4596#4597#0" expanded="false" />
+                <element signature="e#4680#4681#0" expanded="false" />
+                <element signature="e#4709#4710#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompleteDeck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/CompleteDeck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmptyDeck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/EmptyDeck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -149,14 +312,14 @@
         <option value="$PROJECT_DIR$/src/main/java/cardGame/game/Movable.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/model/AbstractDeck.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/model/CompleteDeck.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/controller/ButtonBar.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/controller/ResetAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java" />
       </list>
     </option>
   </component>
@@ -190,6 +353,7 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -442,7 +606,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -964,11 +1127,14 @@
       <workItem from="1495782015600" duration="17867000" />
       <workItem from="1496051075985" duration="493000" />
       <workItem from="1496051855845" duration="8967000" />
+      <workItem from="1496140325565" duration="328000" />
+      <workItem from="1496159584172" duration="2591000" />
+      <workItem from="1496176498453" duration="694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33318000" />
+    <option name="totallyTimeSpent" value="37656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="41" width="1356" height="777" extended-state="0" />
@@ -977,7 +1143,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -998,34 +1164,11 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33050847" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24410029" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1043,52 +1186,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
-          <folding>
-            <marker date="1496085121000" expanded="true" signature="179:186" ph="/**...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding>
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3327#3328#0" expanded="true" />
-            <marker date="1496088820000" expanded="false" signature="4962:4973" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5002:5008" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5127:5136" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5168:5175" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5280:5289" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5309:5316" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5558:5567" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5589:5596" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1104,24 +1201,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="111" column="88" lean-forward="false" selection-start-line="111" selection-start-column="88" selection-end-line="111" selection-end-column="88" />
           <folding>
-            <element signature="e#9931#9932#0" expanded="true" />
-            <element signature="e#9956#9957#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1141,7 +1228,7 @@
         <state relative-caret-position="945">
           <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
           <folding>
-            <marker date="1496085121000" expanded="true" signature="179:186" ph="/**...*/" />
+            <marker date="1496168818000" expanded="true" signature="179:186" ph="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1153,17 +1240,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1177,20 +1254,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding>
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3327#3328#0" expanded="true" />
-            <marker date="1496088820000" expanded="false" signature="4962:4973" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5002:5008" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5127:5136" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5168:5175" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5280:5289" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5309:5316" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5558:5567" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5589:5596" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,8 +1263,8 @@
         <state relative-caret-position="1470">
           <caret line="111" column="88" lean-forward="false" selection-start-line="111" selection-start-column="88" selection-end-line="111" selection-end-column="88" />
           <folding>
-            <element signature="e#9931#9932#0" expanded="true" />
-            <element signature="e#9956#9957#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1220,7 +1284,7 @@
         <state relative-caret-position="945">
           <caret line="67" column="56" lean-forward="true" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
           <folding>
-            <marker date="1496085121000" expanded="true" signature="179:186" ph="/**...*/" />
+            <marker date="1496168818000" expanded="true" signature="179:186" ph="/**...*/" />
           </folding>
         </state>
       </provider>
@@ -1232,17 +1296,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1256,20 +1310,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="58" column="58" lean-forward="false" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
-          <folding>
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3327#3328#0" expanded="true" />
-            <marker date="1496088820000" expanded="false" signature="4962:4973" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5002:5008" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5127:5136" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5168:5175" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5280:5289" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5309:5316" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5558:5567" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5589:5596" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1278,64 +1319,61 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/CardDragger.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Draw.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/DrawPanel.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/AbstractDeck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/CompleteDeck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/DoubleDeck.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/DiscardPile.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/Card.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Movable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/SolitaireRules.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ButtonBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#362#363#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ResetAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
+        <state relative-caret-position="120">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Movable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/util/Emptiable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/util/Sized.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1343,6 +1381,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1354,87 +1393,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/CardTextures.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        <state relative-caret-position="210">
+          <caret line="21" column="61" lean-forward="false" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovablePile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/AbstractDeck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="750">
+          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/MovableCard.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="135">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="false" />
+            <element signature="e#3701#3702#0" expanded="false" />
+            <element signature="e#3810#3811#0" expanded="false" />
+            <element signature="e#3847#3848#0" expanded="false" />
+            <element signature="e#4460#4461#0" expanded="false" />
+            <element signature="e#4487#4488#0" expanded="false" />
+            <element signature="e#4569#4570#0" expanded="false" />
+            <element signature="e#4596#4597#0" expanded="false" />
+            <element signature="e#4680#4681#0" expanded="false" />
+            <element signature="e#4709#4710#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/CompleteDeck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/model/EmptyDeck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ButtonBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/SolitaireDragger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="92">
+          <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
           <folding>
-            <marker date="1496085121000" expanded="true" signature="179:186" ph="/**...*/" />
+            <marker date="1496168818000" expanded="true" signature="179:186" ph="/**...*/" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/CardTextures.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/controller/ResetButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="135">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/game/Solitaire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="111" column="24" lean-forward="false" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
-          <folding>
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3327#3328#0" expanded="true" />
-            <marker date="1496088820000" expanded="false" signature="4962:4973" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5002:5008" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5127:5136" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5168:5175" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5280:5289" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5309:5316" ph=" }" />
-            <marker date="1496088820000" expanded="false" signature="5558:5567" ph=" { " />
-            <marker date="1496088820000" expanded="false" signature="5589:5596" ph=" }" />
-          </folding>
+        <state relative-caret-position="1425">
+          <caret line="105" column="34" lean-forward="false" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardGame/view/SolitairePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="229" column="26" lean-forward="false" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
+        <state relative-caret-position="-1158">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding>
-            <element signature="e#9931#9932#0" expanded="true" />
-            <element signature="e#9956#9957#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
           </folding>
         </state>
       </provider>

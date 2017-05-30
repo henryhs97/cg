@@ -90,7 +90,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 	        movables.get(to).addOnTop(movables.get(from).splitAt(index));
 	        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()) {
 	            movables.get(from).addOnTop(decks.get(from).draw());
-	        }        
+	        }
     	}
     	if(didYouWin()) {
 			won = true;
@@ -98,11 +98,27 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     	setChanged();
         notifyObservers();
     }
-    
+
+    public void autoMove(int from, int index){
+    	if(from == 0){
+    		return; // TODO: fix first deck
+		}
+		for(int i = 11; i > 0; i--){
+    		if(validMove(from,i,index)) {
+				movables.get(i).addOnTop(movables.get(from).splitAt(index));
+				if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()) {
+					movables.get(from).addOnTop(decks.get(from).draw());
+				}
+				return;
+			}
+			System.out.println(i);
+		}
+	}
     /**
      * Returns true if it is a valid solitaire move
      */
     public boolean validMove(int from, int to, int index) {
+    	System.out.println(to + " " + from);
     	Card movingTo = movables.get(to).getTopCard();
     	Card selectedCard = movables.get(from).getCardAt(index); 	  	
     	switch(to) {

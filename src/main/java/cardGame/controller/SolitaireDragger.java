@@ -55,6 +55,10 @@ public class SolitaireDragger extends MouseInputAdapter {
                     solitaire.getMovablePile(deckNum).setIndex(index);                    
                     startX = event.getX();
                     startY = event.getY();
+                    if(event.getClickCount()==2) {
+                        System.out.println("New innovative double click response, IGN 10/10");
+                        solitaire.autoMove(selectedDeck,index);
+                    }
                     break;
                 }
             }
