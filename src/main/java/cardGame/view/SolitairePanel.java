@@ -127,7 +127,7 @@ public class SolitairePanel extends JPanel implements Observer {
         }
       
         /* Draws the face-up movable cards for the above decks. */
-        for(int deckNum = 0; deckNum < numColumnDecks-1; deckNum++) {
+        for(int deckNum = (solitaire.getMovablePile(0).isEmpty() ? 1 : 0); deckNum < numColumnDecks-1; deckNum++) {
             MovablePile dependency = solitaire.getMovablePile(deckNum);
          // something moved?
             if(dependency != null && (dependency.getRelativeX() != 0 || dependency.getRelativeY() != 0)) { 

@@ -51,9 +51,6 @@ public class MovablePile extends Movable implements Sized, Emptiable{
      * returns null. Returns the removed card
      */
     public Card removeTopCard(){
-        if(index >= size() || index < 0) {
-            return null;
-        }
         return pile.remove(pile.size() - 1);
     }
 
