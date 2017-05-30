@@ -75,6 +75,13 @@ public class SolitairePanel extends JPanel implements Observer {
         return (getWidth() * 20)/1000;
     }
 
+    public int getMainOffset(){
+        return mainDeckOffset() + getSmallCardSpacing() * (solitaire.getMovablePile(0).size() - 1);
+    }
+
+    private int getSmallCardSpacing(){
+        return SMALL_CARD_SPACING;
+    }
     //Assures that a pile of 21 (largest possible size) cards can fit onto the screen
     public int getCardSpacing() {
         if(getHeight() < 2 * getSpacing() + 19 * BIG_CARD_SPACING)
@@ -102,7 +109,7 @@ public class SolitairePanel extends JPanel implements Observer {
         return getHeight() / 4 - (getSpacing() * 5)/2;
     }
 
-    public int mainDeckOffset() {
+    private int mainDeckOffset() {
         return getCardSpacing() + cardHeight();
     }
     /**

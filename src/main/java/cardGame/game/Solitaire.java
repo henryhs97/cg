@@ -73,11 +73,7 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 		for(int i = 0; i < 12; i++) {
 			movables.add(createMovablePile(getDeck(i)));
 		}
-	}  
-    
-    /**
-     * Moves a pile of cards starting at index to another pile.
-     */
+	}
 
     public void drawFromMain() {
     	if(!decks.get(0).isEmpty()) {
@@ -92,6 +88,10 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
 		setChanged();
     	notifyObservers();
 	}
+
+	/**
+	 * Moves a pile of cards starting at index to another pile.
+	 */
 
     public void move(int from, int to, int index) {
     	/* Special case for main deck */

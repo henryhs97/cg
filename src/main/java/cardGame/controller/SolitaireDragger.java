@@ -42,8 +42,8 @@ public class SolitaireDragger extends MouseInputAdapter {
     	if(deckNum == 0 &&
                 event.getX() > panel.getMovableX(deckNum) &&
                 event.getX() < panel.getMovableX(deckNum) + panel.cardWidth() &&
-                event.getY() > panel.getMovableY(deckNum) - panel.mainDeckOffset() &&
-                event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - panel.mainDeckOffset()
+                event.getY() > panel.getMovableY(deckNum) - panel.getMainOffset() &&
+                event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - panel.getMainOffset()
         ) {
             solitaire.drawFromMain();
             selectedDeck = -1;
