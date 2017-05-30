@@ -104,9 +104,7 @@ public class MovablePile extends Movable implements Sized, Emptiable{
     /**
      * Returns true if this pile is empty.
      */
-    public boolean isEmpty() {
-    	return pile.isEmpty();
-    }
+    public boolean isEmpty() { return pile.isEmpty(); }
 
     /**
      * Getter for the current index this pile has, used to split.

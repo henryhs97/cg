@@ -78,15 +78,27 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     /**
      * Moves a pile of cards starting at index to another pile.
      */
+
+    public void drawFromMain() {
+    	if(!decks.get(0).isEmpty()) {
+			movables.get(0).addOnTop(getDeck(0).draw());
+		}else{
+			System.out.println(decks.get(0).isEmpty());
+			while(!movables.get(0).isEmpty()) {
+				decks.get(0).addOnTop(movables.get(0).removeTopCard());
+			}
+			System.out.println(movables.get(0).isEmpty());
+		}
+		setChanged();
+    	notifyObservers();
+	}
+
     public void move(int from, int to, int index) {
     	/* Special case for main deck */
     	if(won){
     		return;
 		}
-    	if(from == 0 && to == 0 && !movables.get(0).isEmpty()) {
-    		getDeck(0).addOnBottom(movables.get(0).removeTopCard());
-    		movables.get(0).addOnTop(getDeck(0).draw());
-    	}  	else if(validMove(from, to, index)) {		
+    	if(validMove(from, to, index)) {
 	        movables.get(to).addOnTop(movables.get(from).splitAt(index));
 	        if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()) {
 	            movables.get(from).addOnTop(decks.get(from).draw());
@@ -100,14 +112,17 @@ public class Solitaire extends Observable implements Observer, SolitaireRules{
     }
 
     public void autoMove(int from, int index){
-    	if(from == 0){
-    		return; // TODO: fix first deck
+    	if(won){
+    		return;
 		}
 		for(int i = 11; i > 0; i--){
     		if(validMove(from,i,index)) {
 				movables.get(i).addOnTop(movables.get(from).splitAt(index));
 				if(movables.get(from).size() == 0 && !decks.get(from).isEmpty()) {
 					movables.get(from).addOnTop(decks.get(from).draw());
+				}
+				if(didYouWin()){
+					won = true;
 				}
 				return;
 			}

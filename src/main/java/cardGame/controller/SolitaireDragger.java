@@ -38,13 +38,23 @@ public class SolitaireDragger extends MouseInputAdapter {
      */
     @Override
     public void mousePressed(MouseEvent event) {   	
-    	int deckNum= panel.inArea(event.getPoint());
-	    if(solitaire.getMovablePile(deckNum) != null) {
+    	int deckNum = panel.inArea(event.getPoint());
+    	if(deckNum == 0 &&
+                event.getX() > panel.getMovableX(deckNum) &&
+                event.getX() < panel.getMovableX(deckNum) + panel.cardWidth() &&
+                event.getY() > panel.getMovableY(deckNum) - panel.mainDeckOffset() &&
+                event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - panel.mainDeckOffset()
+        ) {
+            solitaire.drawFromMain();
+            selectedDeck = -1;
+            System.out.println(panel.getMovableY(0));
+        }else
+        if(solitaire.getMovablePile(deckNum) != null) {
             for(int cardNum = 0; cardNum < solitaire.getMovablePile(deckNum).size(); cardNum++) {
                 if (    event.getX() > panel.getMovableX(deckNum) &&
                         event.getX() < panel.getMovableX(deckNum) + panel.cardWidth() &&
-                        event.getY() > panel.getMovableY(deckNum) - panel.getCardSpacing() * (cardNum) &&
-                        event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - panel.getCardSpacing() * (cardNum)
+                        event.getY() > panel.getMovableY(deckNum) - (deckNum > 0 ? 1 : 0) * panel.getCardSpacing() * (cardNum) &&
+                        event.getY() < panel.getMovableY(deckNum) + panel.cardHeight() - (deckNum > 0 ? 1 : 0) * panel.getCardSpacing() * (cardNum)
                         ) {
                     selectedDeck = deckNum;
                     if(selectedDeck < 8) {

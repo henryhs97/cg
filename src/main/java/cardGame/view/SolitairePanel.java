@@ -102,6 +102,9 @@ public class SolitairePanel extends JPanel implements Observer {
         return getHeight() / 4 - (getSpacing() * 5)/2;
     }
 
+    public int mainDeckOffset() {
+        return getCardSpacing() + cardHeight();
+    }
     /**
      * Paints the decks on the screen.
      */
@@ -134,7 +137,7 @@ public class SolitairePanel extends JPanel implements Observer {
                 for (depth = 0; depth < solitaire.getMovablePile(deckNum).size(); ++depth) {
                     movableX = getSpacing() + deckNum * getWidth() / numColumnDecks;
                     
-                    movableY = deckNum==0 ? getSpacing() + SMALL_CARD_SPACING * solitaire.getDeck(deckNum).size() + SMALL_CARD_SPACING * depth
+                    movableY = deckNum==0 ? getSpacing() + SMALL_CARD_SPACING * solitaire.getDeck(deckNum).size() + SMALL_CARD_SPACING * depth + mainDeckOffset()
                     		: getSpacing() + getCardSpacing() * solitaire.getDeck(deckNum).size() + getCardSpacing() * depth;
                     g.drawImage(CardTextures.getTexture(solitaire.getMovablePile(deckNum).getCardAt(depth))
                             , movableX, movableY, cardWidth(), cardHeight(), this);
@@ -208,7 +211,7 @@ public class SolitairePanel extends JPanel implements Observer {
        	 movableY = getSpacing()  + (currMovable-8)*getHeight()/4;
 
        } else if(currMovable == 0) {
-       	movableY = getSpacing() + SMALL_CARD_SPACING * solitaire.getDeck(currMovable).size() + SMALL_CARD_SPACING * depth;
+       	movableY = getSpacing() + SMALL_CARD_SPACING * solitaire.getDeck(currMovable).size() + SMALL_CARD_SPACING * depth + mainDeckOffset();
 
        } else {
        	movableY =  getSpacing() + getCardSpacing() * solitaire.getDeck(currMovable).size() + getCardSpacing() * depth;
